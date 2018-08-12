@@ -1,0 +1,216 @@
+<p>﻿—
+layout: post
+title: “为GitHub Pages自定义域名并添加SSL-开启https强制”
+date: 2018-04-23
+description: “为GitHub Pages自定义域名、借助Cloudflare添加免费SSL、并开启https强制”
+tag: SSL
+—</p>
+
+<h2 id="直奔主题">直奔主题</h2>
+
+<h3 id="为什么要使用https协议">为什么要使用https协议？</h3>
+
+<ol>
+  <li>
+    <p>提高网站访问安全性，网络连接都是加密的 (PS：虽然<code class="highlighter-rouge">SSL</code>并不是无懈可击的，但是我们应该尽可能提高窃听成本)。</p>
+  </li>
+  <li>
+    <p>目前越来越多的浏览器会判断当前站点支不支持https协议，提高用户信任度，体验好.</p>
+
+    <blockquote>
+      <p>例如：据外媒报道，从2017年1月份正式发布的Chrome 56开始，Google将把某些包含敏感内容的HTTP页面标记为<code class="highlighter-rouge">“不安全”</code>，比如含有密码或支付表单信息。Google最终目标是将所有打破了https连接的HTTP页面，用特定的<code class="highlighter-rouge">红色图标</code>给标记出来… 此举旨在唤起用户有关HTTP连接不安全、容易受到中间人攻击等危险的意识。通过HTTP连接发送的数据（比如密码和支付细节），会被通网络下别有用心的人轻易拦截。</p>
+    </blockquote>
+  </li>
+  <li>
+    <p>Mozilla也在做着同样的事情——其中就有通过提供免费的TSL证书，以便其为网站服务部署https连接的<code class="highlighter-rouge">Let's Encrypt项目</code>。根据Chrome的遥测数据，在该浏览器每天加载的网页中，有近一半是通过https连接的。</p>
+  </li>
+  <li>
+    <p>福利：使用了https之后，如果网站的访客是从其他已经使用了https的网站上跳转过来，你就能在<code class="highlighter-rouge">Google Analytics</code>中获取更完整的来源信息。(说到这，不得不吐槽一下”墙”，它导致 <code class="highlighter-rouge">Google Analytics</code>的信息延迟长达一天以上，最后我不得不再将 <code class="highlighter-rouge">Baidu Analytics</code> 纳入我的选择。)</p>
+  </li>
+  <li>
+    <p>使用https之后，谷歌、百度等搜索排名权值（PR等）也会有相对提升。</p>
+  </li>
+  <li>
+    <p>And 个人原因，作为一个有个性并略有强迫症的耿直Boy，终于在前一阵子给自己的博客弄了个人域名<code class="highlighter-rouge">zhouie.cn</code>(阿里云)，怎么可以没有一把小小的<code class="highlighter-rouge">绿锁头</code>？！</p>
+  </li>
+</ol>
+
+<p>默认情况下使用GitHub Pages的给定域名则支持http和https两种协议，但是如果使用自定义域名的话，则只能通过<code class="highlighter-rouge">http://</code>访问，也就是说我们在<code class="highlighter-rouge">Github上搭建 Hexo 或Jekyll 主题博客</code>后，通过<code class="highlighter-rouge">CNAME</code>绑定个人域名后，我们只能通过<code class="highlighter-rouge">http://</code>域名来访问。如果访问<code class="highlighter-rouge">https://XXX.github.io/</code>(即原来的GitHub Pages域名)将会被重定向到<code class="highlighter-rouge">我们的自定义域名</code>。但若直接访问<code class="highlighter-rouge">https://我们的自定义域名</code>，浏览器会报<code class="highlighter-rouge">SSL_DOMAIN_NOT_MATCHED</code>警告。</p>
+
+<blockquote>
+  <p>附：<code class="highlighter-rouge">在Github上搭建 Hexo 或Jekyll 主题博客</code>，这个网上教程很多，提供一篇我之前有写过的一篇教程<a href="https://javef.github.io/2018/02/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E6%8B%93%E5%B1%95%E7%89%88/">Jekyll 搭建个人博客</a>。</p>
+</blockquote>
+
+<p>那么怎么给自己的域名加上<code class="highlighter-rouge">https</code>呢？这个时候就需要使用第三方网站的证书了。而GitHub Pages并不支持上传SSL证书。</p>
+
+<p>我在Google、Bbaidu上找相关解决办法时，又看到这样一个帖子：<a href="https://www.v2ex.com/t/379653">GitHub Pages 自定义域名启用 SSL，各位有什么建议？</a>。</p>
+
+<p>从网上提供的信息来看，目前方案主要有两种：</p>
+
+<ul>
+  <li>
+    <p>自己购买证书，部署到一台机器，机器部署<code class="highlighter-rouge">nginx</code>，<code class="highlighter-rouge">stunnel</code>等代理软件，反向代理到GitHub pages站点，域名指向代理机器IP(收费的SSL服务肯定是比免费的更加周到，一般收费的SSL都会提供端到端的加密，但是价格不菲，不推荐，不过这里还是分享一篇相关教程<a href="https://zhuanlan.zhihu.com/p/29644657">一步步教你把HTTP网站免费转成HTTPS网站</a>)；</p>
+  </li>
+  <li>
+    <p>使用CloudFlare提供方案1类似的设置(推荐)</p>
+  </li>
+</ul>
+
+<hr />
+<h2 id="借用cloudflare-给自己的域名加个-s">借用CloudFlare 给自己的域名加个 s</h2>
+
+<p><a href="https://www.cloudflare.com/">CloudFlare</a> 是一家CDN提供商，它提供了<code class="highlighter-rouge">免费的https服务</code>(但不是应用SSL证书)。实现模式就是，用户到CDN服务器的连接为<code class="highlighter-rouge">https</code>，而CDN服务器到GithubPage服务器的连接为<code class="highlighter-rouge">http</code>，就是在CDN服务器那里加上反向代理。</p>
+
+<blockquote>
+  <p>在网上还找到这样一种解释
+Cloudflare 提供一种被他们称之为<code class="highlighter-rouge">Universal SSL</code>的服务，可以让任意 <code class="highlighter-rouge">HTTP </code>站点支持 <code class="highlighter-rouge">HTTPS</code>。它的原理是当访客使用 <code class="highlighter-rouge">HTTPS</code>访问站点的时候，从访客到 Cloudflare 这段是加密的，然后从 Cloudflare 到站点这段是明文的。虽然不是全程加密，但是也能很大程度上解决中间人，如果从 Cloudflare 到站点的信道相对可靠的话</p>
+</blockquote>
+
+<ol>
+  <li>注册并登录CloudFlare，并将自己域名下的<code class="highlighter-rouge">name server</code>修改为CloudFlare的<code class="highlighter-rouge">name server</code>。</li>
+  <li>在CloudFlare的DNS设置域名匹配到自己的GithubPage(启用动态DNS加速)。</li>
+  <li>在CloudFlare的<code class="highlighter-rouge">Crypto</code>设置SSL为<code class="highlighter-rouge">Flexible</code>(等待一定时间实现建立连接后，就可以通过<code class="highlighter-rouge">https</code>来访问自己的 GithubPage )。</li>
+  <li>在CloudFlare的<code class="highlighter-rouge">Page Rules</code>中设置路由规则。一般情况下，利用<code class="highlighter-rouge">Always use https</code>设置两条规则，规则链接分别为<code class="highlighter-rouge">http://域名/*</code> 与<code class="highlighter-rouge">http://域名/</code>(开启https强制跳转)。</li>
+</ol>
+
+<p>还有其他的一些，例如Cloudflare还提供免费的<code class="highlighter-rouge">CDN</code>和<code class="highlighter-rouge">缓存技术</code>，让浏览者有更好的体验~~</p>
+
+<h3 id="详细步骤">详细步骤</h3>
+
+<ul>
+  <li>创建CloudFlare帐户，并添加网站</li>
+</ul>
+
+<p>首先你已经有自己的<code class="highlighter-rouge">自定义域名</code>的GitHub Pages ，我的 GitHub Pages CNAME文件写的是 <code class="highlighter-rouge">zhouie.cn</code></p>
+
+<blockquote>
+  <p>明确一下我们的实现目标： 当访客输入<code class="highlighter-rouge">zhouie.cn</code> 强制跳转使用https，访问<code class="highlighter-rouge">wwww.zhouie.cn</code> 也会跳转到<code class="highlighter-rouge">https://www.zhouie.cn</code></p>
+</blockquote>
+
+<p>如果你还没有Cloudflare账号，<a href="https://www.cloudflare.com/a/sign-up">点击注册</a></p>
+
+<ul>
+  <li>登陆后，<a href="https://www.cloudflare.com/a/add-site">点击这里</a> 增加你的域名，如下图，输入你的域名，例如 <code class="highlighter-rouge">zhouie.cn</code> 并点击<code class="highlighter-rouge">Begin Scan</code></li>
+</ul>
+
+<p><img src="https://dha4w82d62smt.cloudfront.net/items/1p3D360D0G3y1z1C363y/Image%202018-04-23%20at%206.45.37%20PM.png" alt="" /></p>
+
+<blockquote>
+  <p>注意不要写<code class="highlighter-rouge">WWW</code>前缀，大约60秒即可完成域名解析扫描。完成后点击<code class="highlighter-rouge">Continue Setup</code> 继续下一步</p>
+</blockquote>
+
+<ul>
+  <li>你看到<code class="highlighter-rouge">DNS记录（包括子域）列表</code>之后，按照下图提示设置后，其中<code class="highlighter-rouge">cname</code>是为了重定向<code class="highlighter-rouge">www</code>备的，点击<code class="highlighter-rouge">Continue</code>下一步</li>
+</ul>
+
+<p><img src="https://dha4w82d62smt.cloudfront.net/items/3l0J1B3N3z2U142b1I0v/Image%202018-04-23%20at%206.54.04%20PM.png" alt="" /></p>
+
+<ul>
+  <li>选择免费计划，然后下一步~</li>
+</ul>
+
+<p><img src="https://dha4w82d62smt.cloudfront.net/items/3k0s2u3h1E3Y2W0M2J0o/Image%202018-04-23%20at%206.55.56%20PM.png" alt="" /></p>
+
+<blockquote>
+  <p>到你域名控制面板修改<code class="highlighter-rouge">cloudflare</code>给出的域名服务器，我这里以<code class="highlighter-rouge">阿里云</code>为例</p>
+</blockquote>
+
+<ul>
+  <li>在<code class="highlighter-rouge">域名管理台</code>点击<code class="highlighter-rouge">管理</code></li>
+</ul>
+
+<p><img src="https://dha4w82d62smt.cloudfront.net/items/2d1w3U2z2U3R2q0Q2N1R/Image%202018-04-23%20at%207.02.00%20PM.png" alt="" /></p>
+
+<p><img src="https://dha4w82d62smt.cloudfront.net/items/2u3o1Q3z383R0O0Z2F14/Image%202018-04-23%20at%207.11.28%20PM.png" alt="" /></p>
+
+<blockquote>
+  <p>注：虽然官方说明，域名服务器修改最长需要72小时生效，但我用域名做了自己测试，大约只需要 5~10 分钟，看到 <strong>Status: Active</strong> 即可</p>
+</blockquote>
+
+<p><img src="https://dha4w82d62smt.cloudfront.net/items/1t3O2b3t2Y2K2g1M303h/Image%202018-04-23%20at%207.17.33%20PM.png" alt="" /></p>
+
+<ul>
+  <li>设置SSL
+点击 <code class="highlighter-rouge">crypto </code>菜单 , 然后设置<code class="highlighter-rouge">Flexible SSL</code> ，如下图</li>
+</ul>
+
+<p><img src="https://dha4w82d62smt.cloudfront.net/items/3E1j3m3a1X3i362v431x/Image%202018-04-23%20at%207.19.14%20PM.png" alt="" /></p>
+
+<ul>
+  <li>添加www重定向到https://yicodes.com</li>
+</ul>
+
+<p><img src="https://dha4w82d62smt.cloudfront.net/items/0o1p3o0t0G2Y0N2h2B3x/Image%202018-04-23%20at%207.23.29%20PM.png" alt="" /></p>
+
+<ul>
+  <li>添加自动重定向到 SSL页面</li>
+</ul>
+
+<p><img src="https://dha4w82d62smt.cloudfront.net/items/2d2V021G3V2J3i2a201I/Image%202018-04-23%20at%207.26.11%20PM.png" alt="" /></p>
+
+<ul>
+  <li>添加SSL的教程就此完成，一般需要5~30分钟生效！！！ 
+<img src="https://dha4w82d62smt.cloudfront.net/items/3C1w0i0V2A0U241k0n0u/Screen%20Recording%202018-04-23%20at%2007.37.38.99%20PM.gif" alt="" /></li>
+</ul>
+
+<h3 id="小绿锁出现了哈哈">小绿锁出现了，哈哈</h3>
+
+<p><img src="https://dha4w82d62smt.cloudfront.net/items/1v1B1F0h3f371Y3W1G3Q/Image%202018-04-23%20at%208.23.01%20PM.png" alt="" /></p>
+
+<hr />
+<h2 id="补充转载">补充<a href="https://steffan.cn/">[转载]</a></h2>
+<h3 id="为什么github-pages不支持为自定义域名添加ssl证书呢">为什么Github Pages不支持为自定义域名添加SSL证书呢？</h3>
+<p>当我们访问自定义域名，DNS指向的地址(<code class="highlighter-rouge">Github Pages</code>的<code class="highlighter-rouge">IP</code>)会在我们的仓库中寻找<code class="highlighter-rouge">cname</code>文件，判断目标文件和请求来源地址的域名一致后，<code class="highlighter-rouge">Github Pages</code>会将<code class="highlighter-rouge">errorlife.github.io</code>的内容返回给用户。
+<img src="https://dha4w82d62smt.cloudfront.net/items/2F1j3N1e1Y0T2n0w3I19/Image%202018-04-23%20at%207.52.59%20PM.png" alt="" /></p>
+
+<p><img src="https://dha4w82d62smt.cloudfront.net/items/3F3j0e1H1H0l1R2C1Q3j/Image%202018-04-23%20at%207.56.43%20PM.png" alt="" /></p>
+
+<ul>
+  <li>
+    <p>Ok，这是一个比较完整的过程，但是在解析的途中，看上面两张图(tracert一下这个”裸奔”站好了 :P)，你会发现请求的地址是“美国Fastly公司CDN网络节点”，很明显这是Github的CDN，而且它只支持80端口，不支持443端口，免费的CDN一般不支持,而https默认就是使用443端口。</p>
+  </li>
+  <li>
+    <p>所以我们就知道Github Pages在解析域名和原生地址所分配的是不同的CDN，前者是不支持https的，而后者恰恰相反。</p>
+  </li>
+</ul>
+
+<h3 id="思考我们牺牲了什么">思考我们牺牲了什么</h3>
+<blockquote>
+  <p>天下没有免费的午餐，不劳而获始终都是泡沫。所以在这个过程中我们究竟牺牲了什么？</p>
+</blockquote>
+
+<ol>
+  <li>我们必须<code class="highlighter-rouge">修改域名的DNS服务器</code>为Cloudflare提供的地址才能使用这项服务；</li>
+  <li>无法进行<code class="highlighter-rouge">coding+github双线部署</code>，除非你使用Cloudflare的<code class="highlighter-rouge">收费服务</code>，或者<code class="highlighter-rouge">反向代理</code>，更多思路详见<code class="highlighter-rouge">v2ex</code>提问的一个<a href="https://www.v2ex.com/t/344686">帖子</a>。</li>
+</ol>
+
+<h3 id="检查是否引用外部资源">检查是否引用外部资源</h3>
+<p>这个问题在我这儿并没有出现过，可是从网上教程来看，因为以往(一两年前)引用的某些外部资源还是<code class="highlighter-rouge">http</code>的，会出现一些问题，比如：</p>
+
+<blockquote>
+  <p>生效后我发现我的网站是不太安全的状态，而且当我点击加载脚本之后，从不太安全的状态变成了不安全的状态。</p>
+</blockquote>
+
+<p>v友的解决办法：</p>
+<blockquote>
+  <p>按下<code class="highlighter-rouge">F12</code>，尴尬的事情发生了，原来是配置文件和<code class="highlighter-rouge">palceholder</code>在作怪，由于<code class="highlighter-rouge">多说</code>的头像用的还是<code class="highlighter-rouge">http</code>，巧的是，没多久，多说就下线关门了。</p>
+</blockquote>
+
+<p><img src="https://dha4w82d62smt.cloudfront.net/items/133s2D1e2O2z163v0y0g/Image%202018-04-23%20at%208.17.06%20PM.png" alt="" /></p>
+
+<blockquote>
+  <p>这就要求我们对https协议理解通透，之后google了一下，发现https并不支持这种第三方引入资源。</p>
+</blockquote>
+
+<hr />
+<h2 id="参考资料">参考资料</h2>
+<ul>
+  <li><a href="https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/">cloudflare官方使用指南</a></li>
+  <li><a href="https://blog.keanulee.com/2014/10/11/setting-up-ssl-on-github-pages.html">keanulee Blog</a></li>
+  <li><a href="https://sheharyar.me/blog/free-ssl-for-github-pages-with-custom-domains/">sheharyar Blog</a></li>
+  <li><a href="https://blog.jamespan.me/2015/04/17/github-and-gitcafe-pages">Pages 博客 HTTPS 化尝试与 Universal SSL</a></li>
+  <li><a href="https://www.yicodes.com/2016/12/04/free-cloudflare-ssl-for-custom-domain/">为自定义域名的GitHub Pages添加SSL 完整方案</a></li>
+  <li><a href="https://www.mdslq.cn/archives/40865889.html">Hexo支持https访问</a></li>
+  <li><a href="https://www.zhihu.com/question/33495825">github pages绑定了个人域名，怎么使用https访问而证书不报错呢？-知乎</a></li>
+  <li><a href="http://mazhuang.org/2016/05/21/enable-https-for-github-pages/">为绑定域名的 GitHub Pages 启用 HTTPS</a>»»»没有测试过，不过似乎已经不能用了。</li>
+</ul>

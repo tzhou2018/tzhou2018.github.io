@@ -1,0 +1,1690 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Solarzhou's Blog</title>
+    <description>为你，千千万万遍。</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sun, 12 Aug 2018 17:29:36 +0800</pubDate>
+    <lastBuildDate>Sun, 12 Aug 2018 17:29:36 +0800</lastBuildDate>
+    <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>重要公告</title>
+        <description>&lt;p&gt;&lt;img src=&quot;https://timgsa.baidu.com/timg?image&amp;amp;quality=80&amp;amp;size=b9999_10000&amp;amp;sec=1525670104&amp;amp;di=e12a5b57a7d008916868a9171c092a84&amp;amp;imgtype=jpg&amp;amp;er=1&amp;amp;src=http%3A%2F%2Fimgsrc.baidu.com%2Fimgad%2Fpic%2Fitem%2Fd788d43f8794a4c2f296e50305f41bd5ad6e3964.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;p&gt;
+&lt;p&gt;&lt;p&gt;&lt;p&gt;
+ &lt;h2&gt; 本站自2018年5月1日起暂时不再继续更新，仅供学习参观！&lt;/h2&gt;
+
+  &lt;h2&gt; 目前我的新站点为[北岛向南的小屋](https://zhouie.cn).欢迎访问~&lt;/h2&gt;
+
+&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;&lt;/p&gt;
+</description>
+        <pubDate>Mon, 30 Apr 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/04/%E9%87%8D%E8%A6%81%E5%85%AC%E5%91%8A/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/%E9%87%8D%E8%A6%81%E5%85%AC%E5%91%8A/</guid>
+        
+        <category>公告</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>图床以及在线分享演示文稿</title>
+        <description>&lt;h2 id=&quot;关于图床&quot;&gt;关于图床&lt;/h2&gt;
+
+&lt;h3 id=&quot;什么是图床&quot;&gt;什么是图床？&lt;/h3&gt;
+
+&lt;p&gt;这并不是一个多么高大上的名词概念！用比较通俗的话来说，当你在撰写新文章时，你需要去插入图片以使得你的文章内容更加直观、易懂，这个时候有以下几种办法：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;在博客根目录的 source 文件夹下新建一个&lt;code class=&quot;highlighter-rouge&quot;&gt;image&lt;/code&gt;文件夹专门存放图片，在博文中引用的图片路径为 &lt;code class=&quot;highlighter-rouge&quot;&gt;/image/图片名.后缀&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;![](图片路径)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;对于那些想要更有规律地提供图片和其他资源以及想要将他们的资源分布在各个文章上的人来说，Hexo也提供了更组织化的方式来管理资源，将站点配置文件中的&lt;strong&gt;post_ asset _folder&lt;/strong&gt; 选项设为 true 来打开文章资源文件夹&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;post _asset_folder: true&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;然后再博文中通过相对路径引用&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;asset&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;_img&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;图片文件名%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;我们知道Github的主机还在国外，虽说目前访问速度还不算慢的，可是不论是Github还是Coding，项目容量都是有限的，不可能放入太多图片文件。 如果在项目文件中以相对路径引用的话，会出现跳转页面时一些图片路径会错误；使用绝对路径引用的话，会出现重定向的问题，浏览器可能会报&lt;code class=&quot;highlighter-rouge&quot;&gt;302异常&lt;/code&gt;，使浏览器上的绿色小锁头不见了(这个不能忍……)。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;使用第三方云服务储存，把图片放在国内的图床上是个更好的选择，虽然绝大多数云服务提供商都是收费(或是会有会员免费体验期或是按月分发一些免费容量)的，但在这个巨大的网络缝隙中，还是能找到其他一些可取的方法去满足我们(贫穷的学生党，嘤嘤嘤~~)，下面我会列出一些我所找到的可取之径：&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;国内&quot;&gt;国内&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cn.aliyun.com/&quot;&gt;阿里云&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cloud.tencent.com/&quot;&gt;腾讯云&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cloud.baidu.com/&quot;&gt;百度云&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.163yun.com/&quot;&gt;网易云&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.qiniu.com/&quot;&gt;七牛云&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.upyun.com/&quot;&gt;又拍云&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.fangcloud.com/&quot;&gt;亿方云&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianguoyun.com/&quot;&gt;坚果云&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://500px.com/&quot;&gt;500px&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://photo.weibo.com/upload/index?prel=p0_1&quot;&gt;上传照片到微博微相册&lt;/a&gt;
+QQ空间相册其实也是可以的，只是这类处理方法也比较麻烦lo…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;上面这些都是目前国内一些在云服务方面较为主流的、实力也比较可靠的服务提供商，很多带有CDN加速处理，加载起来会更快。但可能有时候会因为容量太少的问题等，给劳苦大众带来一些不愉快，所以啊，还是广泛地搜集了一波国内其他一些的图床服务，其实这也是为了应对自己的不时之需，毕竟国内做图床服务这方面的不稳定性真的是…跌宕起伏&lt;/p&gt;
+
+&lt;p&gt;(哎，抬头看向窗外，长城的方向)&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;| 图床服务 | 个人评价 |
+|:-:|:-:|
+|&lt;a href=&quot;https://sm.ms/&quot;&gt;SM.MS&lt;/a&gt; |⭐⭐⭐⭐|
+|&lt;a href=&quot;https://www.tuchuang001.com/&quot;&gt;cheveieto&lt;/a&gt;|⭐⭐⭐⭐|
+| &lt;a href=&quot;https://imgchr.com/&quot;&gt;路过图床&lt;/a&gt;	|⭐⭐⭐|
+|&lt;a href=&quot;http://upload.otar.im/&quot;&gt;uploader&lt;/a&gt;	|⭐⭐⭐|
+|&lt;a href=&quot;http://www.tietuku.com/&quot;&gt;贴图库&lt;/a&gt;	|⭐⭐⭐|
+|&lt;a href=&quot;http://www.clantu.com/&quot;&gt;Clantu云相册&lt;/a&gt;	|⭐⭐⭐|
+|&lt;a href=&quot;http://zs.mtkan.cc/&quot;&gt;淡然图床&lt;/a&gt;	|⭐⭐⭐|
+|&lt;a href=&quot;http://www.suiyiyun.cn/&quot;&gt;随意云&lt;/a&gt;|⭐⭐⭐|
+|&lt;a href=&quot;http://mpic.lzhaofu.cn/&quot;&gt;MPic-图床神器&lt;/a&gt;|⭐⭐⭐|
+|&lt;a href=&quot;https://tu.aixinxi.net/index.php&quot;&gt;爱信息图床&lt;/a&gt;	|⭐⭐⭐|
+|&lt;a href=&quot;https://pic.gimhoy.com/&quot;&gt;Gimhoy图床&lt;/a&gt;	|⭐⭐|
+|&lt;a href=&quot;https://loli.io/signin&quot;&gt;萝莉图床&lt;/a&gt;|⭐⭐|&lt;/p&gt;
+
+&lt;h3 id=&quot;国外&quot;&gt;国外&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://app.cl.ly/drops&quot;&gt;CloudApp&lt;/a&gt;————国内可访问，个人很推荐这个应用&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.dropbox.com/h&quot;&gt;Dropbox&lt;/a&gt;————墙了&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.flickr.com/&quot;&gt;Flickr&lt;/a&gt;————墙了&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;关于在线分享演示文稿&quot;&gt;关于在线分享演示文稿&lt;/h2&gt;
+
+&lt;h3 id=&quot;在线分享演示文稿&quot;&gt;在线分享演示文稿&lt;/h3&gt;
+
+&lt;p&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;在线分享演示文稿&lt;/code&gt;这个标题的选择上，斟酌了好久，🙊就感觉怎么用最少的汉字来准确完整地将这项&lt;code class=&quot;highlighter-rouge&quot;&gt;design tool &lt;/code&gt;的作用与应用领域给表达出来…&lt;/p&gt;
+
+&lt;p&gt;直接用一个实例展示一下吧~&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;//slides.com/zhouie/deck/embed?style=dark&quot;&gt;点击查看&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;工具分享&quot;&gt;工具分享&lt;/h3&gt;
+&lt;p&gt;目前我遇到的主要就是这两个，以后要是遇到相关的、喜欢的会再补充。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://speakerdeck.com&quot;&gt;SpeakerDeck&lt;/a&gt;————墙了&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://slides.com&quot;&gt;Slides&lt;/a&gt;————国内可访问，个人很推荐这个应用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;待补充&quot;&gt;待补充&lt;/h3&gt;
+&lt;p&gt;…&lt;/p&gt;
+</description>
+        <pubDate>Thu, 26 Apr 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/04/%E5%9B%BE%E5%BA%8A%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BA%BF%E5%88%86%E4%BA%AB%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/%E5%9B%BE%E5%BA%8A%E4%BB%A5%E5%8F%8A%E5%9C%A8%E7%BA%BF%E5%88%86%E4%BA%AB%E6%BC%94%E7%A4%BA%E6%96%87%E7%A8%BF/</guid>
+        
+        <category>Tool</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>为github pages自定义域名并添加ssl 开启https强制</title>
+        <description>&lt;p&gt;﻿—
+layout: post
+title: “为GitHub Pages自定义域名并添加SSL-开启https强制”
+date: 2018-04-23
+description: “为GitHub Pages自定义域名、借助Cloudflare添加免费SSL、并开启https强制”
+tag: SSL
+—&lt;/p&gt;
+
+&lt;h2 id=&quot;直奔主题&quot;&gt;直奔主题&lt;/h2&gt;
+
+&lt;h3 id=&quot;为什么要使用https协议&quot;&gt;为什么要使用https协议？&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;提高网站访问安全性，网络连接都是加密的 (PS：虽然&lt;code class=&quot;highlighter-rouge&quot;&gt;SSL&lt;/code&gt;并不是无懈可击的，但是我们应该尽可能提高窃听成本)。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;目前越来越多的浏览器会判断当前站点支不支持https协议，提高用户信任度，体验好.&lt;/p&gt;
+
+    &lt;blockquote&gt;
+      &lt;p&gt;例如：据外媒报道，从2017年1月份正式发布的Chrome 56开始，Google将把某些包含敏感内容的HTTP页面标记为&lt;code class=&quot;highlighter-rouge&quot;&gt;“不安全”&lt;/code&gt;，比如含有密码或支付表单信息。Google最终目标是将所有打破了https连接的HTTP页面，用特定的&lt;code class=&quot;highlighter-rouge&quot;&gt;红色图标&lt;/code&gt;给标记出来… 此举旨在唤起用户有关HTTP连接不安全、容易受到中间人攻击等危险的意识。通过HTTP连接发送的数据（比如密码和支付细节），会被通网络下别有用心的人轻易拦截。&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Mozilla也在做着同样的事情——其中就有通过提供免费的TSL证书，以便其为网站服务部署https连接的&lt;code class=&quot;highlighter-rouge&quot;&gt;Let's Encrypt项目&lt;/code&gt;。根据Chrome的遥测数据，在该浏览器每天加载的网页中，有近一半是通过https连接的。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;福利：使用了https之后，如果网站的访客是从其他已经使用了https的网站上跳转过来，你就能在&lt;code class=&quot;highlighter-rouge&quot;&gt;Google Analytics&lt;/code&gt;中获取更完整的来源信息。(说到这，不得不吐槽一下”墙”，它导致 &lt;code class=&quot;highlighter-rouge&quot;&gt;Google Analytics&lt;/code&gt;的信息延迟长达一天以上，最后我不得不再将 &lt;code class=&quot;highlighter-rouge&quot;&gt;Baidu Analytics&lt;/code&gt; 纳入我的选择。)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;使用https之后，谷歌、百度等搜索排名权值（PR等）也会有相对提升。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;And 个人原因，作为一个有个性并略有强迫症的耿直Boy，终于在前一阵子给自己的博客弄了个人域名&lt;code class=&quot;highlighter-rouge&quot;&gt;zhouie.cn&lt;/code&gt;(阿里云)，怎么可以没有一把小小的&lt;code class=&quot;highlighter-rouge&quot;&gt;绿锁头&lt;/code&gt;？！&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;默认情况下使用GitHub Pages的给定域名则支持http和https两种协议，但是如果使用自定义域名的话，则只能通过&lt;code class=&quot;highlighter-rouge&quot;&gt;http://&lt;/code&gt;访问，也就是说我们在&lt;code class=&quot;highlighter-rouge&quot;&gt;Github上搭建 Hexo 或Jekyll 主题博客&lt;/code&gt;后，通过&lt;code class=&quot;highlighter-rouge&quot;&gt;CNAME&lt;/code&gt;绑定个人域名后，我们只能通过&lt;code class=&quot;highlighter-rouge&quot;&gt;http://&lt;/code&gt;域名来访问。如果访问&lt;code class=&quot;highlighter-rouge&quot;&gt;https://XXX.github.io/&lt;/code&gt;(即原来的GitHub Pages域名)将会被重定向到&lt;code class=&quot;highlighter-rouge&quot;&gt;我们的自定义域名&lt;/code&gt;。但若直接访问&lt;code class=&quot;highlighter-rouge&quot;&gt;https://我们的自定义域名&lt;/code&gt;，浏览器会报&lt;code class=&quot;highlighter-rouge&quot;&gt;SSL_DOMAIN_NOT_MATCHED&lt;/code&gt;警告。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;附：&lt;code class=&quot;highlighter-rouge&quot;&gt;在Github上搭建 Hexo 或Jekyll 主题博客&lt;/code&gt;，这个网上教程很多，提供一篇我之前有写过的一篇教程&lt;a href=&quot;https://javef.github.io/2018/02/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E6%8B%93%E5%B1%95%E7%89%88/&quot;&gt;Jekyll 搭建个人博客&lt;/a&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;那么怎么给自己的域名加上&lt;code class=&quot;highlighter-rouge&quot;&gt;https&lt;/code&gt;呢？这个时候就需要使用第三方网站的证书了。而GitHub Pages并不支持上传SSL证书。&lt;/p&gt;
+
+&lt;p&gt;我在Google、Bbaidu上找相关解决办法时，又看到这样一个帖子：&lt;a href=&quot;https://www.v2ex.com/t/379653&quot;&gt;GitHub Pages 自定义域名启用 SSL，各位有什么建议？&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;从网上提供的信息来看，目前方案主要有两种：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;自己购买证书，部署到一台机器，机器部署&lt;code class=&quot;highlighter-rouge&quot;&gt;nginx&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;stunnel&lt;/code&gt;等代理软件，反向代理到GitHub pages站点，域名指向代理机器IP(收费的SSL服务肯定是比免费的更加周到，一般收费的SSL都会提供端到端的加密，但是价格不菲，不推荐，不过这里还是分享一篇相关教程&lt;a href=&quot;https://zhuanlan.zhihu.com/p/29644657&quot;&gt;一步步教你把HTTP网站免费转成HTTPS网站&lt;/a&gt;)；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;使用CloudFlare提供方案1类似的设置(推荐)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;借用cloudflare-给自己的域名加个-s&quot;&gt;借用CloudFlare 给自己的域名加个 s&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.cloudflare.com/&quot;&gt;CloudFlare&lt;/a&gt; 是一家CDN提供商，它提供了&lt;code class=&quot;highlighter-rouge&quot;&gt;免费的https服务&lt;/code&gt;(但不是应用SSL证书)。实现模式就是，用户到CDN服务器的连接为&lt;code class=&quot;highlighter-rouge&quot;&gt;https&lt;/code&gt;，而CDN服务器到GithubPage服务器的连接为&lt;code class=&quot;highlighter-rouge&quot;&gt;http&lt;/code&gt;，就是在CDN服务器那里加上反向代理。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;在网上还找到这样一种解释
+Cloudflare 提供一种被他们称之为&lt;code class=&quot;highlighter-rouge&quot;&gt;Universal SSL&lt;/code&gt;的服务，可以让任意 &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTP &lt;/code&gt;站点支持 &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTPS&lt;/code&gt;。它的原理是当访客使用 &lt;code class=&quot;highlighter-rouge&quot;&gt;HTTPS&lt;/code&gt;访问站点的时候，从访客到 Cloudflare 这段是加密的，然后从 Cloudflare 到站点这段是明文的。虽然不是全程加密，但是也能很大程度上解决中间人，如果从 Cloudflare 到站点的信道相对可靠的话&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;注册并登录CloudFlare，并将自己域名下的&lt;code class=&quot;highlighter-rouge&quot;&gt;name server&lt;/code&gt;修改为CloudFlare的&lt;code class=&quot;highlighter-rouge&quot;&gt;name server&lt;/code&gt;。&lt;/li&gt;
+  &lt;li&gt;在CloudFlare的DNS设置域名匹配到自己的GithubPage(启用动态DNS加速)。&lt;/li&gt;
+  &lt;li&gt;在CloudFlare的&lt;code class=&quot;highlighter-rouge&quot;&gt;Crypto&lt;/code&gt;设置SSL为&lt;code class=&quot;highlighter-rouge&quot;&gt;Flexible&lt;/code&gt;(等待一定时间实现建立连接后，就可以通过&lt;code class=&quot;highlighter-rouge&quot;&gt;https&lt;/code&gt;来访问自己的 GithubPage )。&lt;/li&gt;
+  &lt;li&gt;在CloudFlare的&lt;code class=&quot;highlighter-rouge&quot;&gt;Page Rules&lt;/code&gt;中设置路由规则。一般情况下，利用&lt;code class=&quot;highlighter-rouge&quot;&gt;Always use https&lt;/code&gt;设置两条规则，规则链接分别为&lt;code class=&quot;highlighter-rouge&quot;&gt;http://域名/*&lt;/code&gt; 与&lt;code class=&quot;highlighter-rouge&quot;&gt;http://域名/&lt;/code&gt;(开启https强制跳转)。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;还有其他的一些，例如Cloudflare还提供免费的&lt;code class=&quot;highlighter-rouge&quot;&gt;CDN&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;缓存技术&lt;/code&gt;，让浏览者有更好的体验~~&lt;/p&gt;
+
+&lt;h3 id=&quot;详细步骤&quot;&gt;详细步骤&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;创建CloudFlare帐户，并添加网站&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;首先你已经有自己的&lt;code class=&quot;highlighter-rouge&quot;&gt;自定义域名&lt;/code&gt;的GitHub Pages ，我的 GitHub Pages CNAME文件写的是 &lt;code class=&quot;highlighter-rouge&quot;&gt;zhouie.cn&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;明确一下我们的实现目标： 当访客输入&lt;code class=&quot;highlighter-rouge&quot;&gt;zhouie.cn&lt;/code&gt; 强制跳转使用https，访问&lt;code class=&quot;highlighter-rouge&quot;&gt;wwww.zhouie.cn&lt;/code&gt; 也会跳转到&lt;code class=&quot;highlighter-rouge&quot;&gt;https://www.zhouie.cn&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;如果你还没有Cloudflare账号，&lt;a href=&quot;https://www.cloudflare.com/a/sign-up&quot;&gt;点击注册&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;登陆后，&lt;a href=&quot;https://www.cloudflare.com/a/add-site&quot;&gt;点击这里&lt;/a&gt; 增加你的域名，如下图，输入你的域名，例如 &lt;code class=&quot;highlighter-rouge&quot;&gt;zhouie.cn&lt;/code&gt; 并点击&lt;code class=&quot;highlighter-rouge&quot;&gt;Begin Scan&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/1p3D360D0G3y1z1C363y/Image%202018-04-23%20at%206.45.37%20PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;注意不要写&lt;code class=&quot;highlighter-rouge&quot;&gt;WWW&lt;/code&gt;前缀，大约60秒即可完成域名解析扫描。完成后点击&lt;code class=&quot;highlighter-rouge&quot;&gt;Continue Setup&lt;/code&gt; 继续下一步&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;你看到&lt;code class=&quot;highlighter-rouge&quot;&gt;DNS记录（包括子域）列表&lt;/code&gt;之后，按照下图提示设置后，其中&lt;code class=&quot;highlighter-rouge&quot;&gt;cname&lt;/code&gt;是为了重定向&lt;code class=&quot;highlighter-rouge&quot;&gt;www&lt;/code&gt;备的，点击&lt;code class=&quot;highlighter-rouge&quot;&gt;Continue&lt;/code&gt;下一步&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/3l0J1B3N3z2U142b1I0v/Image%202018-04-23%20at%206.54.04%20PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;选择免费计划，然后下一步~&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/3k0s2u3h1E3Y2W0M2J0o/Image%202018-04-23%20at%206.55.56%20PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;到你域名控制面板修改&lt;code class=&quot;highlighter-rouge&quot;&gt;cloudflare&lt;/code&gt;给出的域名服务器，我这里以&lt;code class=&quot;highlighter-rouge&quot;&gt;阿里云&lt;/code&gt;为例&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;域名管理台&lt;/code&gt;点击&lt;code class=&quot;highlighter-rouge&quot;&gt;管理&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/2d1w3U2z2U3R2q0Q2N1R/Image%202018-04-23%20at%207.02.00%20PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/2u3o1Q3z383R0O0Z2F14/Image%202018-04-23%20at%207.11.28%20PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;注：虽然官方说明，域名服务器修改最长需要72小时生效，但我用域名做了自己测试，大约只需要 5~10 分钟，看到 &lt;strong&gt;Status: Active&lt;/strong&gt; 即可&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/1t3O2b3t2Y2K2g1M303h/Image%202018-04-23%20at%207.17.33%20PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;设置SSL
+点击 &lt;code class=&quot;highlighter-rouge&quot;&gt;crypto &lt;/code&gt;菜单 , 然后设置&lt;code class=&quot;highlighter-rouge&quot;&gt;Flexible SSL&lt;/code&gt; ，如下图&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/3E1j3m3a1X3i362v431x/Image%202018-04-23%20at%207.19.14%20PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;添加www重定向到https://yicodes.com&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/0o1p3o0t0G2Y0N2h2B3x/Image%202018-04-23%20at%207.23.29%20PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;添加自动重定向到 SSL页面&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/2d2V021G3V2J3i2a201I/Image%202018-04-23%20at%207.26.11%20PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;添加SSL的教程就此完成，一般需要5~30分钟生效！！！ 
+&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/3C1w0i0V2A0U241k0n0u/Screen%20Recording%202018-04-23%20at%2007.37.38.99%20PM.gif&quot; alt=&quot;&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;小绿锁出现了哈哈&quot;&gt;小绿锁出现了，哈哈&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/1v1B1F0h3f371Y3W1G3Q/Image%202018-04-23%20at%208.23.01%20PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;补充转载&quot;&gt;补充&lt;a href=&quot;https://steffan.cn/&quot;&gt;[转载]&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;为什么github-pages不支持为自定义域名添加ssl证书呢&quot;&gt;为什么Github Pages不支持为自定义域名添加SSL证书呢？&lt;/h3&gt;
+&lt;p&gt;当我们访问自定义域名，DNS指向的地址(&lt;code class=&quot;highlighter-rouge&quot;&gt;Github Pages&lt;/code&gt;的&lt;code class=&quot;highlighter-rouge&quot;&gt;IP&lt;/code&gt;)会在我们的仓库中寻找&lt;code class=&quot;highlighter-rouge&quot;&gt;cname&lt;/code&gt;文件，判断目标文件和请求来源地址的域名一致后，&lt;code class=&quot;highlighter-rouge&quot;&gt;Github Pages&lt;/code&gt;会将&lt;code class=&quot;highlighter-rouge&quot;&gt;errorlife.github.io&lt;/code&gt;的内容返回给用户。
+&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/2F1j3N1e1Y0T2n0w3I19/Image%202018-04-23%20at%207.52.59%20PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/3F3j0e1H1H0l1R2C1Q3j/Image%202018-04-23%20at%207.56.43%20PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ok，这是一个比较完整的过程，但是在解析的途中，看上面两张图(tracert一下这个”裸奔”站好了 :P)，你会发现请求的地址是“美国Fastly公司CDN网络节点”，很明显这是Github的CDN，而且它只支持80端口，不支持443端口，免费的CDN一般不支持,而https默认就是使用443端口。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;所以我们就知道Github Pages在解析域名和原生地址所分配的是不同的CDN，前者是不支持https的，而后者恰恰相反。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;思考我们牺牲了什么&quot;&gt;思考我们牺牲了什么&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;天下没有免费的午餐，不劳而获始终都是泡沫。所以在这个过程中我们究竟牺牲了什么？&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;我们必须&lt;code class=&quot;highlighter-rouge&quot;&gt;修改域名的DNS服务器&lt;/code&gt;为Cloudflare提供的地址才能使用这项服务；&lt;/li&gt;
+  &lt;li&gt;无法进行&lt;code class=&quot;highlighter-rouge&quot;&gt;coding+github双线部署&lt;/code&gt;，除非你使用Cloudflare的&lt;code class=&quot;highlighter-rouge&quot;&gt;收费服务&lt;/code&gt;，或者&lt;code class=&quot;highlighter-rouge&quot;&gt;反向代理&lt;/code&gt;，更多思路详见&lt;code class=&quot;highlighter-rouge&quot;&gt;v2ex&lt;/code&gt;提问的一个&lt;a href=&quot;https://www.v2ex.com/t/344686&quot;&gt;帖子&lt;/a&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;检查是否引用外部资源&quot;&gt;检查是否引用外部资源&lt;/h3&gt;
+&lt;p&gt;这个问题在我这儿并没有出现过，可是从网上教程来看，因为以往(一两年前)引用的某些外部资源还是&lt;code class=&quot;highlighter-rouge&quot;&gt;http&lt;/code&gt;的，会出现一些问题，比如：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;生效后我发现我的网站是不太安全的状态，而且当我点击加载脚本之后，从不太安全的状态变成了不安全的状态。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;v友的解决办法：&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;按下&lt;code class=&quot;highlighter-rouge&quot;&gt;F12&lt;/code&gt;，尴尬的事情发生了，原来是配置文件和&lt;code class=&quot;highlighter-rouge&quot;&gt;palceholder&lt;/code&gt;在作怪，由于&lt;code class=&quot;highlighter-rouge&quot;&gt;多说&lt;/code&gt;的头像用的还是&lt;code class=&quot;highlighter-rouge&quot;&gt;http&lt;/code&gt;，巧的是，没多久，多说就下线关门了。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/133s2D1e2O2z163v0y0g/Image%202018-04-23%20at%208.17.06%20PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;这就要求我们对https协议理解通透，之后google了一下，发现https并不支持这种第三方引入资源。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;参考资料&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/&quot;&gt;cloudflare官方使用指南&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.keanulee.com/2014/10/11/setting-up-ssl-on-github-pages.html&quot;&gt;keanulee Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://sheharyar.me/blog/free-ssl-for-github-pages-with-custom-domains/&quot;&gt;sheharyar Blog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.jamespan.me/2015/04/17/github-and-gitcafe-pages&quot;&gt;Pages 博客 HTTPS 化尝试与 Universal SSL&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.yicodes.com/2016/12/04/free-cloudflare-ssl-for-custom-domain/&quot;&gt;为自定义域名的GitHub Pages添加SSL 完整方案&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.mdslq.cn/archives/40865889.html&quot;&gt;Hexo支持https访问&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.zhihu.com/question/33495825&quot;&gt;github pages绑定了个人域名，怎么使用https访问而证书不报错呢？-知乎&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mazhuang.org/2016/05/21/enable-https-for-github-pages/&quot;&gt;为绑定域名的 GitHub Pages 启用 HTTPS&lt;/a&gt;»»»没有测试过，不过似乎已经不能用了。&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 23 Apr 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/04/%E4%B8%BAGitHub-Pages%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0SSL-%E5%BC%80%E5%90%AFHTTPS%E5%BC%BA%E5%88%B6/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/%E4%B8%BAGitHub-Pages%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0SSL-%E5%BC%80%E5%90%AFHTTPS%E5%BC%BA%E5%88%B6/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>走进Markdown园子</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;起初也就是打算简单一些Markdown在编辑Blog方面的一些常用操作和注意事项，没想到，一下没刹住，毫无防备地闯进了这个好趣的园子….&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;1-认识-markdown&quot;&gt;1. 认识 Markdown&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;HTML(HyperText Markup Language)作为一种超文本标记语言(markup language)应运而生，无数的网页从此有了主次分明，层次清晰的格式。如果将HTML比作一架重机枪，那么Markdown就是一把手枪，满足了主要的文本格式标记的需求，可是操作性却大大简化。秉承&lt;strong&gt;「易读易写」&lt;/strong&gt;的宗旨，Markdown作为一种轻量级标记语言(lightweight markup language)，让无数的程序猿和文字工作者爱不释手。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;11-markdown的优点&quot;&gt;1.1 Markdown的优点&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;专注你的文字内容而不是排版样式，安心写作。&lt;/li&gt;
+  &lt;li&gt;轻松的导出 HTML、PDF 和本身的 .md 文件。&lt;/li&gt;
+  &lt;li&gt;纯文本内容，兼容所有的文本编辑器与字处理软件。&lt;/li&gt;
+  &lt;li&gt;随时修改你的文章版本，不必像字处理软件生成若干文件版本导致混乱。&lt;/li&gt;
+  &lt;li&gt;可读、直观、学习成本低。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;12-对markdown的误解&quot;&gt;1.2 对Markdown的误解&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;We believe that writing is about content, about what you want to say – not about fancy formatting.&lt;/strong&gt;
+我们坚信写作写的是内容，所思所想，而不是花样格式。    —-  Ulysses for Mac&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Markdown 旨在简洁、高效，也由于 Markdown 的易读易写，人们用不同的编程语言实现了多个版本的解析器和生成器。这就导致了目前不同的 Markdown 工具集成了不同的功能（基础功能大致相同），例如流程图与时序图，复杂表格与复杂公式的呈现。&lt;/p&gt;
+
+&lt;p&gt;虽然功能的丰富并没有什么本质的缺点，但终归有些背离初衷，何况在编写的过程中很费神，不如使用专业的工具撰写来的更有效率，所以如果你需实现复杂功能，专业的图形界面工具会更加方便。&lt;/p&gt;
+
+&lt;p&gt;当然，如果你对折腾这些不同客户端对 Markdown 的定制所带来高阶功能感到愉悦的话，那也是无可厚非的。&lt;/p&gt;
+
+&lt;h3 id=&quot;13-markdown官方文档&quot;&gt;1.3 Markdown官方文档&lt;/h3&gt;
+&lt;p&gt;官方的 Markdown 语法规则文档，当然，后文我也会用自己的方式，阐述这些语法在实际使用中的用法。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://daringfireball.net/projects/markdown/syntax&quot;&gt;创始人 John Gruber 的 Markdown 语法说明&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://wowubuntu.com/markdown/#list&quot;&gt;Markdown 中文版语法说明&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;2-使用markdown&quot;&gt;2. 使用Markdown&lt;/h2&gt;
+
+&lt;h3 id=&quot;21-标题&quot;&gt;2.1 标题&lt;/h3&gt;
+
+&lt;p&gt;Markdown通过在行首添加1-6个&lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt;符号来定义不同级别的标题，最多到六级标题。注意&lt;code class=&quot;highlighter-rouge&quot;&gt;#&lt;/code&gt;后需要加一个空格。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;#h1
+##h2二级标题
+######h6六级标题
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;特别的，还可使用&lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt;(高阶标题)和&lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;(次阶标题)标记一级和二级标题。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;这是高阶标题(效果和一级标题一样)
+=
+这是次阶标题(效果和二级标题一样)
+-
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;标记标题时，&lt;code class=&quot;highlighter-rouge&quot;&gt;=&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;的个数在不同的编辑器中都有不同，只要1个或者大于等于两个又或者必须要三个(含三个)以上的才可以表示，这倒不是多大的问题了，简单试试就知道了。&lt;/p&gt;
+
+&lt;h3 id=&quot;22-加粗斜体和删除线&quot;&gt;2.2 加粗、斜体和删除线&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;markdown使用&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt;来强调文本，使用一个&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt;包围的文本会被转化为斜体，而用两个&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;_&lt;/code&gt;包围的文本则会被转化成加粗，使用两个&lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt;包围的文本会被转化为删除线。&lt;/li&gt;
+  &lt;li&gt;但是如果你的 &lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt; 、&lt;code class=&quot;highlighter-rouge&quot;&gt; _&lt;/code&gt;和 &lt;code class=&quot;highlighter-rouge&quot;&gt;~&lt;/code&gt; 两边都有空白的话，它们就只会被当成普通的符号&lt;/li&gt;
+  &lt;li&gt;如果要在文字前后直接插入普通的星号或底线，你可以用反斜线&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;*斜体文字*
+_斜体文字_
+**加粗文字**
+__加粗文字__
+~~删除内容~~
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;&lt;br /&gt;
+&lt;em&gt;斜体文字&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;斜体文字&lt;/em&gt;&lt;br /&gt;
+&lt;strong&gt;加粗文字&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;加粗文字&lt;/strong&gt;&lt;br /&gt;
+&lt;del&gt;删除内容&lt;/del&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;23-列表&quot;&gt;2.3 列表&lt;/h3&gt;
+&lt;p&gt;Markdown支持无序列表和有序列表。无序列表可以使用&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt;，&lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;三者中任意符号来标记；有序列表则使用&lt;code class=&quot;highlighter-rouge&quot;&gt;数字&lt;/code&gt;加&lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;来标记。&lt;strong&gt;注意标记后面需要加上一个空格，有序列表的数字会被按顺序自动更正&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**有序列表**
+
+1. 第一点
+2. 第二点
+4. 第三点
+
+**无序列表**
+
+- 这是无序列表项目
++ 这是无序列表项目
+* 这是无序列表项目
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;
+&lt;strong&gt;有序列表&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;第一点&lt;/li&gt;
+  &lt;li&gt;第二点&lt;/li&gt;
+  &lt;li&gt;第三点&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;无序列表&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;这是无序列表项目&lt;/li&gt;
+  &lt;li&gt;这是无序列表项目&lt;/li&gt;
+  &lt;li&gt;这是无序列表项目&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;两个列表之间不能相邻，否则会解释为嵌套的列表。下面这个是嵌套的列表&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;* 呵呵
+    + 嘉嘉
+    + 嘻嘻
+    + 吼吼
+        - 嘎嘎
+        - 桀桀
+* 哈哈
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;呵呵
+    &lt;ul&gt;
+      &lt;li&gt;嘉嘉&lt;/li&gt;
+      &lt;li&gt;嘻嘻&lt;/li&gt;
+      &lt;li&gt;吼吼
+        &lt;ul&gt;
+          &lt;li&gt;嘎嘎&lt;/li&gt;
+          &lt;li&gt;桀桀&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;哈哈&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;标记后面最少有一个空格或制表符。&lt;/li&gt;
+  &lt;li&gt;若不在引用区块中，必须和前方段落之间存在空行，后面最好还是空一行，否则会解释为嵌套的列表。&lt;/li&gt;
+  &lt;li&gt;有序列表标记不是按照你写的数字进行显示的，而是根据当前有序列表标记所在位置显示的，如示例1所示。&lt;/li&gt;
+  &lt;li&gt;无序列表的项目符号是按照实心圆、空心圆、实心方格的层级关系递进的。通常情况下，同一层级使用同一种标记表示，便于自己查看和管理。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;24-引用&quot;&gt;2.4 引用&lt;/h3&gt;
+&lt;p&gt;在段落前添加一个&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;符号即可将该段落标记为引用，注意&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;后需要添加一个空格。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; 这是引用
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;这是引用&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;繁琐一点，你也可以在引用段落的每一行都加上&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;符号。并且&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;可以迭代使用，表示引用中的引用效果。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; 这是一级引用
+&amp;gt;&amp;gt; 这是二级引用
+&amp;gt;&amp;gt;&amp;gt; 这是三级引用
+
+&amp;gt; 这是一级引用
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;这是一级引用&lt;/p&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;这是二级引用&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;这是三级引用&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;这是一级引用&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;再如：&lt;strong&gt;书写格式若如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; 这是一级引用
+&amp;gt;&amp;gt; 这是二级引用
+&amp;gt;&amp;gt;&amp;gt; 这是三级引用
+&amp;gt; 这是一级引用
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果则：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;这是一级引用&lt;/p&gt;
+  &lt;blockquote&gt;
+    &lt;p&gt;这是二级引用&lt;/p&gt;
+    &lt;blockquote&gt;
+      &lt;p&gt;这是三级引用
+这是一级引用&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/blockquote&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;从上面两例可看出，如果&amp;gt;、»和»&amp;gt;等嵌套使用的话，从»&amp;gt;退到&amp;gt;时，必须之间要加上一个空行作为过渡，否则默认为下一行和上一行是同一级别的引用。如上例所示。&lt;/li&gt;
+  &lt;li&gt;引用完之后，必须再空一行，重新一个新的开始，否则，以后的文字都将在引用的范围内，不要问我为什么，实践出真知。&lt;/li&gt;
+  &lt;li&gt;引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等(见下面的解析效果)：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;即，&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;gt; ## 这是一个标题。
+&amp;gt;
+&amp;gt; 1.   这是第一行列表项。
+&amp;gt; 2.   这是第二行列表项。
+&amp;gt;
+&amp;gt; 给出一些例子代码：
+&amp;gt;
+&amp;gt;     return shell_exec(&quot;echo $input | $markdown_script&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果则：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h2 id=&quot;这是一个标题&quot;&gt;这是一个标题。&lt;/h2&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;这是第一行列表项。&lt;/li&gt;
+    &lt;li&gt;这是第二行列表项。&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;p&gt;给出一些例子代码：&lt;/p&gt;
+
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  return shell_exec(&quot;echo $input | $markdown_script&quot;);
+&lt;/code&gt;&lt;/pre&gt;
+  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;25-分割线&quot;&gt;2.5 分割线&lt;/h3&gt;
+&lt;p&gt;分割线最常使用就是三个或以上*，还可以使用-和_。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;***
+___
+
+---
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下&lt;/strong&gt;*&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;只要&lt;code class=&quot;highlighter-rouge&quot;&gt;*&lt;/code&gt;或者&lt;code class=&quot;highlighter-rouge&quot;&gt;-&lt;/code&gt;大于等于三个就可组成一条平行线。&lt;/li&gt;
+  &lt;li&gt;使用&lt;code class=&quot;highlighter-rouge&quot;&gt;---&lt;/code&gt;作为水平分割线时，要在它的前后都空一行，防止&lt;code class=&quot;highlighter-rouge&quot;&gt;---&lt;/code&gt;被当成标题标记的表示方式。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;26-插入链接&quot;&gt;2.6 插入链接&lt;/h3&gt;
+&lt;p&gt;markdown文本中插入链接非常方便，有文内链接和引用链接两种方式。注意如果链接的是本地资源，则链接地址为当地资源的路径。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**文内链接**
+这是一个文内链接的[例子](http://example.com/ &quot;鼠标悬浮此处显示的标题&quot;)。
+[这个](http://example.net/)链接在鼠标悬浮时没有标题。
+[这个](/about/)链接是本地资源。
+
+**引用链接**
+这是一个引用链接的[例子][id]。
+[id]: http://example.com/  &quot;鼠标悬浮标题（可选）&quot;
+
+**注意，这里的id没有大小写区分，如果省略id，则前面方括号的内容会被用作id。**
+
+我常用的网站包括[Google][1] ，[Yahoo][2] 和 [MSN][3]。
+[1]:	http://google.com/        &quot;Google&quot;
+[2]:	http://search.yahoo.com/  &quot;Yahoo Search&quot;
+[3]:	http://search.msn.com/    &quot;MSN Search&quot;
+
+**也可以写成**
+
+我常用的网站包括[Google][]，[Yahoo][]和[MSN][]。
+[google]: http://google.com/        &quot;Google&quot;
+[yahoo]:  http://search.yahoo.com/  &quot;Yahoo Search&quot;
+[msn]:    http://search.msn.com/    &quot;MSN Search&quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;文内链接&lt;/strong&gt;&lt;br /&gt;
+这是一个文内链接的&lt;a href=&quot;http://example.com/&quot; title=&quot;鼠标悬浮此处显示的标题&quot;&gt;例子&lt;/a&gt;。&lt;br /&gt;
+&lt;a href=&quot;http://example.net/&quot;&gt;这个&lt;/a&gt;链接在鼠标悬浮时没有标题。&lt;br /&gt;
+&lt;a href=&quot;/about/&quot;&gt;这个&lt;/a&gt;链接是本地资源。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;引用链接&lt;/strong&gt;&lt;br /&gt;
+这是一个引用链接的[例子][id]。&lt;br /&gt;
+[id]: http://example.com/  “鼠标悬浮标题（可选）”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注意，这里的id没有大小写区分，如果省略id，则前面方括号的内容会被用作id。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;我常用的网站包括[Google] [1] ，[Yahoo] [2] 和 [MSN] [3]。&lt;br /&gt;
+[1]: http://google.com/        “Google”&lt;br /&gt;
+[2]: http://search.yahoo.com/  “Yahoo Search”&lt;br /&gt;
+[3]: http://search.msn.com/    “MSN Search”&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;也可以写成&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;我常用的网站包括&lt;a href=&quot;http://google.com/&quot; title=&quot;Google&quot;&gt;Google&lt;/a&gt;，&lt;a href=&quot;http://search.yahoo.com/&quot; title=&quot;Yahoo Search&quot;&gt;Yahoo&lt;/a&gt;和&lt;a href=&quot;http://search.msn.com/&quot; title=&quot;MSN Search&quot;&gt;MSN&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;上述的&lt;code class=&quot;highlighter-rouge&quot;&gt;[1]: http://google.com/  &quot;Google&quot;、[google]: http://google.com/        &quot;Google&quot;&lt;/code&gt;等等之类不会出现在区块中。&lt;/li&gt;
+  &lt;li&gt;文内链接和引用链接显示效果是一样的。但是在编辑状态下的使用情况不一样。文内链接紧跟链接文字，可以在看到链接文字的同时清楚的知道链接地址，但是不便于多次重复利用。引用链接可以重复使用，但一般都是将一些链接放在一起统一管理，如一段文字后面或文章结尾，因此在找到链接和链接文字的对应关系上有些麻烦。各有利弊了，分情况使用。&lt;/li&gt;
+  &lt;li&gt;我原以为所有Markdown编辑器都支持这种引用链接的，经过测试，发现CSDN中是支持的，但后来惊奇地发现，引用链接这种方式在&lt;a href=&quot;https://www.jianshu.com/&quot;&gt;简书&lt;/a&gt;的Markdown编辑工具下以及在我的这个GitHub Pages中是无法解析的。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;27-插入图片&quot;&gt;2.7 插入图片&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;插入图片和插入链接非常类似，只是在方括号前多一个&lt;code class=&quot;highlighter-rouge&quot;&gt;!&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;插入图片&lt;strong&gt;语法&lt;/strong&gt;：&lt;code class=&quot;highlighter-rouge&quot;&gt;![Alt text](/path/to/img.jpg &quot;Optional title&quot;)&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Alt text为如果图片无法显示时显示的文字。&lt;/li&gt;
+    &lt;li&gt;/path/to/img.jpg为图片所在路径。&lt;/li&gt;
+    &lt;li&gt;Optional title为显示标题。显示效果为在你将鼠标放到图片上后，会显示一个小框提示，提示的内容就是Optional title。&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;**文内链接：**
+![图灵社区](http://www.turingbook.com/Content/img/Turing.Gif)
+
+**引用链接**
+[图灵社区][1]
+![图灵社区Logo][2]
+[1]: http://www.ituring.com.cn
+[2]: http://www.turingbook.com/Content/img/Turing.Gif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;&lt;br /&gt;
+&lt;strong&gt;文内链接：&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&quot;http://www.turingbook.com/Content/img/Turing.Gif&quot; alt=&quot;图灵社区&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;引用链接&lt;/strong&gt;&lt;br /&gt;
+[图灵社区][1]&lt;br /&gt;
+![图灵社区Logo][2]&lt;br /&gt;
+[1]: http://www.ituring.com.cn &lt;br /&gt;
+[2]: http://www.turingbook.com/Content/img/Turing.Gif&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;同上节链接一样，引用链接这种方式在&lt;a href=&quot;https://www.jianshu.com/&quot;&gt;简书&lt;/a&gt;的Markdown编辑工具下以及我的这个GitHub Pages中是无法解析的。&lt;/li&gt;
+  &lt;li&gt;同时，注意一点：到目前为止， Markdown 还没有办法指定图片的宽高。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;28-表格&quot;&gt;2.8 表格&lt;/h3&gt;
+&lt;p&gt;表格的书写格式一目了然，还是很方便简洁的。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;| 左对齐 | 中间对齐 | 右对齐 |
+| :-     |  :-:     |   -:   |
+| 左1    |  中1     |  右1   |
+| 左2    |  中2     |  右3   |
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;左对齐&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;中间对齐&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;右对齐&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;左1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;中1&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;右1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;左2&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;中2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;右3&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;简书、CSDN中都是能够完整正确解析出表格的；&lt;/li&gt;
+  &lt;li&gt;但不知道为什么，CSDN中表格中的居中、居右不能正确解析出来…sad&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;29-脚标-脚注&quot;&gt;2.9 脚标 (脚注)&lt;/h3&gt;
+&lt;p&gt;不同于链接，这里的脚标内容会被放在文末，点击可以实现跳转，使用&lt;code class=&quot;highlighter-rouge&quot;&gt;[^]&lt;/code&gt;来定义脚注。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;使用 Markdown[^1]可以效率的书写文档, 可以使用 Leanote[^Le] 编辑器进行书写.
+[^1]:Markdown是一种纯文本标记语言
+[^Le]:开源笔记平台，支持Markdown和笔记直接发为博文
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;&lt;br /&gt;
+使用 Markdown&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;可以效率的书写文档,可以使用 Leanote&lt;sup id=&quot;fnref:Le&quot;&gt;&lt;a href=&quot;#fn:Le&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt; 编辑器进行书写.&lt;/p&gt;
+
+&lt;h3 id=&quot;210-其他&quot;&gt;2.10 其他&lt;/h3&gt;
+&lt;h4 id=&quot;2101-上下标&quot;&gt;2.10.1 上下标&lt;/h4&gt;
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;E = mc&amp;lt;sup&amp;gt;2&amp;lt;/sup&amp;gt;
+Water: H&amp;lt;sub&amp;gt;2&amp;lt;/sub&amp;gt;O
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;E = mc&lt;sup&gt;2&lt;/sup&gt; &lt;br /&gt;
+Water: H&lt;sub&gt;2&lt;/sub&gt;O&lt;/p&gt;
+
+&lt;h4 id=&quot;2102-直接链接与邮箱&quot;&gt;2.10.2 直接链接与邮箱&lt;/h4&gt;
+&lt;p&gt;在markdown中将链接地址或邮箱地址用&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;&amp;gt;&lt;/code&gt;包围，则会被自动转换成可点击的链接。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;http://haoeric.com&amp;gt;
+&amp;lt;haoeric0520@gmail.com&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://haoeric.com&quot;&gt;http://haoeric.com&lt;/a&gt;
+&lt;a href=&quot;mailto:haoeric0520@gmail.com&quot;&gt;haoeric0520@gmail.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;
+之前在简书、CSDN中测试都是没有问题的，现在我在Cmd Mardown中重新编辑测试，这里的邮箱竟然会出问题（显示不出来），可能这就是不同平台编辑器下的区别吧…&lt;/p&gt;
+
+&lt;h4 id=&quot;2103-换行&quot;&gt;2.10.3 换行&lt;/h4&gt;
+&lt;p&gt;使用html标签&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;br/&amp;gt;&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;br&amp;gt;&lt;/code&gt;换行&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;第一行hahaha&amp;lt;br/&amp;gt;第二行6666
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;&lt;br /&gt;
+第一行hahaha&lt;br /&gt;第二行6666&lt;/p&gt;
+
+&lt;h4 id=&quot;2104-反斜杠&quot;&gt;2.10.4 反斜杠&lt;/h4&gt;
+&lt;p&gt;如果需要避免文本中的符号被当做markdown标识符而发生不必要的格式转化，可以在符号前加&lt;code class=&quot;highlighter-rouge&quot;&gt;\&lt;/code&gt;来避免。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;\*不是斜体\*
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;* 不是斜体 *&lt;/p&gt;
+
+&lt;p&gt;给出&lt;strong&gt;Markdown支持的转义字符列表：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;\   反斜线
+`   反引号
+*   星号
+_   底线
+{}  花括号
+[]  方括号
+()  括弧
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   惊叹号
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;2105-代码高亮&quot;&gt;2.10.5 代码高亮&lt;/h4&gt;
+&lt;p&gt;使用栅栏标记代码块的一个好处是可以标明代码的语种，然后实现代码的高亮。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;`&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby     
+    require 'redcarpet'  
+    markdown = Redcarpet.new(&quot;Hello World!&quot;)  
+    puts markdown.to_html  
+\&lt;/code&gt;`&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'redcarpet'&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;markdown&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Redcarpet&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Hello World!&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_html&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;貌似目前&lt;a href=&quot;https://www.jianshu.com/&quot;&gt;简书&lt;/a&gt;还没有支持代码高亮….sad&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;2106--关于锚点&quot;&gt;2.10.6  关于锚点&lt;/h4&gt;
+&lt;p&gt;网页中，&lt;code class=&quot;highlighter-rouge&quot;&gt;锚点&lt;/code&gt;其实就是页内超链接，也就是链接本文档内部的某些元素，实现当前页面中的跳转，&lt;strong&gt;可参考Github&lt;/strong&gt;。比如我这里写下一个锚点，点击回到目录，就能跳转到目录。 在目录中点击这一节，就能跳过来。在&lt;code class=&quot;highlighter-rouge&quot;&gt;Github&lt;/code&gt;的&lt;code class=&quot;highlighter-rouge&quot;&gt;md&lt;/code&gt; 文件中，会为每个&lt;code class=&quot;highlighter-rouge&quot;&gt;h1~h6&lt;/code&gt;标签，自动塞入一个&lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt;标签，并渲染好&lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;比如：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# h1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;以上md语言被渲染成html如下：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-HTML&quot;&gt;&amp;lt;h1&amp;gt;
+	&amp;lt;a id=&quot;user-content-h1&quot; class=&quot;anchor&quot; href=&quot;#h1&quot; aria-hidden=&quot;true&quot;&amp;gt;
+		&amp;lt;svg aria-hidden=&quot;true&quot; class=&quot;octicon octicon-link&quot; height=&quot;16&quot; role=&quot;img&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&amp;gt;
+			&amp;lt;path d=&quot;M4 9h1v1h-1c-1.5 0-3-1.69-3-3.5s1.55-3.5 3-3.5h4c1.45 0 3 1.69 3 3.5 0 1.41-0.91 2.72-2 3.25v-1.16c0.58-0.45 1-1.27 1-2.09 0-1.28-1.02-2.5-2-2.5H4c-0.98 0-2 1.22-2 2.5s1 2.5 2 2.5z m9-3h-1v1h1c1 0 2 1.22 2 2.5s-1.02 2.5-2 2.5H9c-0.98 0-2-1.22-2-2.5 0-0.83 0.42-1.64 1-2.09v-1.16c-1.09 0.53-2 1.84-2 3.25 0 1.81 1.55 3.5 3 3.5h4c1.45 0 3-1.69 3-3.5s-1.5-3.5-3-3.5z&quot;&amp;gt;
+			&amp;lt;/path&amp;gt;
+		&amp;lt;/svg&amp;gt;
+	&amp;lt;/a&amp;gt;
+	h1
+&amp;lt;/h1&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;不去管&lt;code class=&quot;highlighter-rouge&quot;&gt;svg&lt;/code&gt;部分，可以看到&lt;code class=&quot;highlighter-rouge&quot;&gt;h1&lt;/code&gt;标签内嵌入了一个&lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt;为 &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;user-content-h1&quot;&lt;/code&gt;的&lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt;标签，如果标题为&lt;code class=&quot;highlighter-rouge&quot;&gt;# h5&lt;/code&gt;，那么id就会是 &lt;code class=&quot;highlighter-rouge&quot;&gt;user-content-h5 &lt;/code&gt;。这样就可以用类似下面的语句对其进行跳转定位：&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#user-content-h1&quot;&gt;快点我&lt;/a&gt;，我要跳转到h1所在的位置&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;效果:&lt;/strong&gt;  一点击&lt;code class=&quot;highlighter-rouge&quot;&gt;快点我，我要跳转到h1所在的位置&lt;/code&gt;,即跳转到h1所在的位置。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;还有一种常见的书写格式如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; ## &amp;lt;span id=a&amp;gt; 标题a &amp;lt;/span&amp;gt;
+跳转到[标题a](#a)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;解析效果如下：&lt;/strong&gt;&lt;br /&gt;
+ ## &amp;lt;span id=a&amp;gt; 标题a &amp;lt;/span&amp;gt;
+跳转到&lt;a href=&quot;#a&quot;&gt;标题a&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;尽管在某些Markdown编辑工具下是无法解析的，比如&lt;a href=&quot;https://www.jianshu.com/&quot;&gt;简书&lt;/a&gt;。&lt;/li&gt;
+  &lt;li&gt;我已经分别在GitHub和CSDN上测试过以上两种锚点方式，结果&lt;strong&gt;可行&lt;/strong&gt;！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;211-markdown的局限性&quot;&gt;2.11 Markdown的局限性&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Markdown没有居中和右对齐功能，除非做扩展.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;不同的Markdown工具功能会不一样，高级功能并不是都有的.&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;部分Markdown工具不支持语法高亮，不显示代码行号.&lt;/li&gt;
+  &lt;li&gt;目录索引很重要，写技术类文章条理很重要，在开篇有个目录，非常有必要.&lt;/li&gt;
+  &lt;li&gt;部分Markdown工具不支持编辑 LaTex数学公式，这是非常必要的功能.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;212-细节要点updating&quot;&gt;2.12 细节要点（updating…）&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;首行缩进：在段首加入&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;emsp;&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;ensp;&lt;/code&gt;、&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;nbsp;&lt;/code&gt;来输入空格，其中，&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;emsp;&lt;/code&gt;是一个中文字符，&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;ensp;&lt;/code&gt;是半个中文字符 ，&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;amp;nbsp;&lt;/code&gt;是1/4中文字符。&lt;/li&gt;
+  &lt;li&gt;[数字] + &lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt; + [空格]的形式会呼出有序的项目列表。因此如果你在正文中恰好出现这种形式，那么可以在&lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;的前面加上&lt;code class=&quot;highlighter-rouge&quot;&gt;\&lt;/code&gt;来避免出现有序列表。&lt;/li&gt;
+  &lt;li&gt;引用区块&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;gt;&lt;/code&gt;和代码区块&lt;code class=&quot;highlighter-rouge&quot;&gt; &lt;/code&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;`有不同的用途：`&amp;gt;`引用区块中的文本保留Markdown语法，而`&lt;/code&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; &lt;/code&gt;代码块中的文本不保留Markdown语法。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;213-补充updating&quot;&gt;2.13 补充（updating…）&lt;/h3&gt;
+&lt;h4 id=&quot;2131-图片图床&quot;&gt;2.13.1 图片图床&lt;/h4&gt;
+&lt;p&gt;插入图片的地址需要图床(什么是图床呢???)，这里推荐&lt;a href=&quot;https://link.jianshu.com/?t=http://weibotuchuang.sinaapp.com/&quot;&gt;围脖图床修复计划&lt;/a&gt;与&lt;a href=&quot;https://link.jianshu.com/?t=https://www.getcloudapp.com/&quot;&gt;CloudApp&lt;/a&gt;的服务，生成URL地址即可。
+&lt;strong&gt;图床&lt;/strong&gt;，顾名思义，图片床，即大量图片汇聚地，每一张图片都有一个url,供所需站点使用。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;推荐工具&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://link.jianshu.com/?t=http://www.qiniu.com/&quot;&gt;七牛云&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://link.jianshu.com/?t=http://weibotuchuang.sinaapp.com/&quot;&gt;围脖图床修复计划&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://link.jianshu.com/?t=https://www.getcloudapp.com/&quot;&gt;CloudApp&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;2132-latex公式&quot;&gt;2.13.2 LaTeX公式&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$&lt;/code&gt;表示行内公式&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;例子如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;爱因斯坦发明的质能方程是：$E=mc^2$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;显示效果：&lt;/strong&gt;
+爱因斯坦发明的质能方程是：$E=mc^2$&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;$$&lt;/code&gt;表示整行公式&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;例子如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$$\sum_{i=1}^n a_i=0$$  
+$$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$
+$$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;显示效果：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;\sum_{i=1}^n a_i=0&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2&lt;/script&gt;&lt;br /&gt;
+&lt;script type=&quot;math/tex&quot;&gt;\sum^{j-1}*{k=0}{\widehat{\gamma}*{kj} z_k}&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;访问&lt;a href=&quot;http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference&quot;&gt;MathJax&lt;/a&gt;参考更多使用方法；&lt;/li&gt;
+  &lt;li&gt;CSDN、Cmd Markdown这里都是可以解析的，But在某些Markdown编辑工具下是无法解析的，比如&lt;a href=&quot;https://www.jianshu.com/&quot;&gt;简书&lt;/a&gt;、我的这个GitHub Pages中。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;2133-流程图&quot;&gt;2.13.3 流程图&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;例子如下：&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;flow
+st=&amp;gt;start: Start:&amp;gt;https://www.zybuluo.com
+io=&amp;gt;inputoutput: verification
+op=&amp;gt;operation: Your Operation
+cond=&amp;gt;condition: Yes or No?
+sub=&amp;gt;subroutine: Your Subroutine
+e=&amp;gt;end
+st-&amp;gt;io-&amp;gt;op-&amp;gt;cond
+cond(yes)-&amp;gt;e
+cond(no)-&amp;gt;sub-&amp;gt;io
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;显示效果：&lt;/strong&gt;&lt;br /&gt;
+flow&lt;br /&gt;
+st=&amp;gt;start: Start:&amp;gt;&lt;a href=&quot;https://link.jianshu.com?t=https://www.zybuluo.com&quot;&gt;https://www.zybuluo.com&lt;/a&gt; &lt;br /&gt;
+io=&amp;gt;inputoutput: verification&lt;br /&gt;
+op=&amp;gt;operation: Your Operation&lt;br /&gt;
+cond=&amp;gt;condition: Yes or No?&lt;br /&gt;
+sub=&amp;gt;subroutine: Your Subroutine &lt;br /&gt;
+e=&amp;gt;end&lt;br /&gt;
+st-&amp;gt;io-&amp;gt;op-&amp;gt;cond&lt;br /&gt;
+cond(yes)-&amp;gt;e&lt;br /&gt;
+cond(no)-&amp;gt;sub-&amp;gt;io&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注意：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;更多语法参考&lt;/strong&gt;: &lt;a href=&quot;http://adrai.github.io/flowchart.js/&quot;&gt;流程图语法参考&lt;/a&gt;；&lt;/li&gt;
+  &lt;li&gt;在某些Markdown编辑工具下是无法解析的，比如CSDN、Cmd Markdown、&lt;a href=&quot;https://www.jianshu.com/&quot;&gt;简书&lt;/a&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;2134-其他某些平台特有语法updating&quot;&gt;2.13.4 其他某些平台特有语法(updating…)&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;GitHub&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Github中的emoji表情&lt;br /&gt;
+Github的Markdown语法支持添加emoji表情，输入不同的符号码（两个冒号包围的字符）可以显示出不同的表情。&lt;br /&gt;
+比如 &lt;code class=&quot;highlighter-rouge&quot;&gt;:blush:&lt;/code&gt;，可以显示 :blush:&lt;br /&gt;
+  &lt;strong&gt;更多表情符号点这里：&lt;/strong&gt;&lt;a href=&quot;https://github.com/Javef/README/blob/master/emoji.md&quot; title=&quot;visit javef's Github&quot;&gt;emoji&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;3-markdown-工具的选择&quot;&gt;3. Markdown 工具的选择&lt;/h2&gt;
+
+&lt;h3 id=&quot;31-mac-平台&quot;&gt;3.1 Mac 平台&lt;/h3&gt;
+
+&lt;p&gt;在 Mac OS X 上，用  &lt;a href=&quot;http://25.io/mou/&quot;&gt;Mou&lt;/a&gt; 这款免费且十分好用的 Markdown 编辑器，它支持实时预览，既左边是你编辑 Markdown 语言，右边会实时的生成预览效果。&lt;/p&gt;
+
+&lt;p&gt;其次还有很多同类选择。如果你是个编辑作者，建议你购买 &lt;a href=&quot;http://www.ulyssesapp.com/&quot;&gt;Ulysses Ⅲ&lt;/a&gt;，这款应用入围了苹果2013年 Mac App Store 的 The Best of 2013，相比 Mou 它支持更多的写作格式、多文档的支持。Mou、iA Writer 这些应用都是基于单文档的管理方式，而 Ulysses Ⅲ 支持 Folder、Filter 的管理，一个 Folder 里面可以创建多个 Sheet，Sheet 之间还可以进行 Combine 处理。&lt;/p&gt;
+
+&lt;h3 id=&quot;32-linux-平台&quot;&gt;3.2 Linux 平台&lt;/h3&gt;
+
+&lt;p&gt;ReText、&lt;a href=&quot;https://www.zybuluo.com/cmd/&quot;&gt;Cmd Markdown&lt;/a&gt;、vim、 &lt;a href=&quot;https://github.com/egrcc/Mango&quot;&gt;Mango&lt;/a&gt;、&lt;a href=&quot;http://pad.haroopress.com/user.html&quot;&gt;Haroopad&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;以vim为例&lt;/strong&gt;
+&lt;br /&gt;
+在vim中写markdown，首先安装语法高亮的插件－－&lt;a href=&quot;https://github.com/plasticboy/vim-markdown&quot;&gt;vim-markdown&lt;/a&gt;．至于预览，则有很多方式：&lt;/p&gt;
+  &lt;ol&gt;
+    &lt;li&gt;使用vim插件－－&lt;a href=&quot;https://github.com/suan/vim-instant-markdown&quot;&gt;vim-instant-markdown&lt;/a&gt; 
+此方法可以实现markdown实时预览，不过得首先安装nodejs和npm．详细的安装过程见&lt;a href=&quot;http://blog.csdn.net/u012948976/article/details/48227713&quot;&gt;vim插件汇总－－Markdown插件&lt;/a&gt;．&lt;/li&gt;
+    &lt;li&gt;vim其他插件－－&lt;a href=&quot;https://github.com/isnowfy/python-vim-instant-markdown&quot;&gt;python-vim-instant-markdown&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;通过＂Markdown.pl＂转换成html在浏览器预览 
+见博文&lt;a href=&quot;http://blog.chinaunix.net/uid-20147410-id-3611957.html&quot;&gt; vim与markdown &lt;/a&gt;．该方式得手动预览．&lt;/li&gt;
+    &lt;li&gt;使用Pandoc 
+&lt;a href=&quot;http://www.jmlog.com/use-pandoc-to-preview-markdown-in-vim/&quot;&gt;利用 Pandoc 预览 VIM 中书写的 Markdown&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;
+      &lt;p&gt;chrome插件－－Markdown Preview Plus 
+&lt;a href=&quot;http://howiefh.github.io/2013/05/16/vim-markdown-preview/&quot;&gt;vim编辑markdown时实现预览&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;
+ 关于产生文章目录的几种方式&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li&gt;安装完插件－－&lt;a href=&quot;https://github.com/plasticboy/vim-markdown&quot;&gt;vim-markdown&lt;/a&gt;后，在vim中直接输入命令&lt;code class=&quot;highlighter-rouge&quot;&gt;:Toc&lt;/code&gt;即可打开显示目录的窗口。&lt;/li&gt;
+    &lt;li&gt;安装插件－－&lt;a href=&quot;https://github.com/majutsushi/tagbar&quot;&gt;tagbar&lt;/a&gt;，并参考&lt;a href=&quot;https://github.com/majutsushi/tagbar/wiki#markdown&quot;&gt;markdown配置&lt;/a&gt;设置即可，注意  &lt;br /&gt;
+g:tagbar_type_markdown 和 ‘ctagstype’: ‘markdown’ 这两个地方需要和你的 vim 所识别的 markdown 格式匹配。检测自己的 vim 所识别的 markdown 文本的格式的方式是在 vim 中输入 :set filetype? ，所显示的 filetype= 后面的内容如果不是markdown，则需要用来替换上面两个地方。&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;p&gt;并且&lt;code class=&quot;highlighter-rouge&quot;&gt;'ctagsbin' : '/path/to/markdown2ctags.py',&lt;/code&gt;中的&lt;code class=&quot;highlighter-rouge&quot;&gt;/path/to&lt;/code&gt;必须替换成自己的路径。&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;安装插件－－&lt;a href=&quot;https://github.com/vim-voom/VOoM&quot;&gt;VOoM&lt;/a&gt;和&lt;a href=&quot;https://xbeta.info/vim-voof.htm&quot;&gt;VOoM(原VOOF)：vim实现带折叠双栏树状文本管理&lt;/a&gt;。&lt;/li&gt;
+    &lt;li&gt;如果想将markdown转为带目录的html文件并在浏览器中预览，可使用githhub项目－－&lt;a href=&quot;https://github.com/i5ting/i5ting_ztree_toc&quot;&gt;i5ting_ztree_toc&lt;/a&gt;。&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;33-window-平台&quot;&gt;3.3 Window 平台&lt;/h3&gt;
+
+&lt;p&gt;Windows 下的 Markdown 工具，有两款还算不错，一款叫  &lt;a href=&quot;http://markdownpad.com/&quot;&gt;MarkdownPad&lt;/a&gt; ，另一款叫 &lt;a href=&quot;http://markpad.fluid.impa.br/&quot;&gt;MarkPad&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;就我知道的，还有&lt;a href=&quot;https://maxiang.io/client_zh&quot; title=&quot;马克飞象，专为印象笔记打造的 Markdown 编辑器&quot;&gt;马克飞象&lt;/a&gt;、&lt;a href=&quot;https://www.zybuluo.com/mdeditor&quot;&gt;Cmd Markdown&lt;/a&gt;相关编辑器。&lt;/p&gt;
+
+&lt;h3 id=&quot;34-ios平台&quot;&gt;3.4 IOS平台&lt;/h3&gt;
+
+&lt;p&gt;iOS 端已有相当多的 app 支持 Markdown 语法编辑，例如 Drafts、Day One、iA Writer 等。&lt;/p&gt;
+
+&lt;h3 id=&quot;35-web平台&quot;&gt;3.5 Web平台&lt;/h3&gt;
+
+&lt;p&gt;Web 端上，推荐 &lt;a href=&quot;https://www.jianshu.com/&quot; title=&quot;创作你的创作，一个优质创作社区&quot;&gt;简书&lt;/a&gt;这款产品，上面有无数热爱文字的人在不停的创造、分享。简书的Web 端使用 Markdown 很舒服，它同样支持左右两栏的实时预览，字体优雅、简洁。&lt;/p&gt;
+
+&lt;p&gt;同样是 Web 端， &lt;a href=&quot;https://draftin.com/&quot;&gt;Draftin&lt;/a&gt; 、 &lt;a href=&quot;http://maxiang.info/&quot; title=&quot;马克飞象，专为印象笔记打造的 Markdown 编辑器&quot;&gt;马克飞象&lt;/a&gt;、 &lt;a href=&quot;http://dillinger.io/&quot;&gt;Dillinger.io&lt;/a&gt; 、&lt;a href=&quot;https://www.zybuluo.com/mdeditor&quot;&gt;Cmd Markdown&lt;/a&gt;、&lt;a href=&quot;https://markable.in/&quot;&gt;Markable.in&lt;/a&gt;这些在线 MD 编辑器也还都不错。&lt;/p&gt;
+
+&lt;h3 id=&quot;36-高级应用&quot;&gt;3.6 高级应用&lt;/h3&gt;
+
+&lt;p&gt;当然，这里不能少了一款非常精巧的文本编辑器，适合编写代码、做笔记、写文章。它用户界面十分整洁，功能非同凡响，性能快得出奇。它就是 &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;Sublime&lt;/a&gt;！！！
+具体可阅览Sublime通过插件实现自如编辑Markdown文档的 &lt;a href=&quot;https://blog.csdn.net/jave_f/article/details/79894028&quot;&gt;教程&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;如有更好的 Markdown 免费编辑器推荐，请到&lt;a href=&quot;https://github.com/Javef/Markdown/issues&quot;&gt;这里留言反馈&lt;/a&gt;，谢谢！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;4-更多链接&quot;&gt;4. 更多链接&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/564bdf3a9462?utm_campaign=maleskine&amp;amp;utm_content=note&amp;amp;utm_medium=seo_notes&amp;amp;utm_source=recommendation&quot;&gt;MarkDown学习笔记&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.zybuluo.com/liayun/note/371635&quot;&gt;首次使用MarkDown好激动&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/d7d6da4b7c60?utm_campaign=maleskine&amp;amp;utm_content=note&amp;amp;utm_medium=seo_notes&amp;amp;utm_source=recommendation&quot;&gt;让你的Markdown用起来得心应手&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.jianshu.com/p/34c92cbd0aaf/&quot;&gt;一段JS代码让Markdown自动生成侧边栏目录&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://wowubuntu.com/markdown/index.html&quot;&gt;Markdown 语法说明 (简体中文版)&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;Markdown是一种纯文本标记语言&amp;nbsp;&lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:Le&quot;&gt;
+      &lt;p&gt;开源笔记平台，支持Markdown和笔记直接发为博文&amp;nbsp;&lt;a href=&quot;#fnref:Le&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Wed, 11 Apr 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/04/%E8%B5%B0%E8%BF%9BMarkdown%E5%9B%AD%E5%AD%90/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/04/%E8%B5%B0%E8%BF%9BMarkdown%E5%9B%AD%E5%AD%90/</guid>
+        
+        <category>Markdown</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Jekyll搭建个人博客-拓展版</title>
+        <description>&lt;h3 id=&quot;写在前面网上搜集来的&quot;&gt;写在前面(网上搜集来的)&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;针对Windows系统下的用户，使用 Jekyll 搭建博客之前要确认下本机环境，&lt;a href=&quot;https://git-scm.com/&quot;&gt;Git&lt;/a&gt; 环境（用于部署到远端）、&lt;a href=&quot;http://www.ruby-lang.org/en/downloads/&quot;&gt;Ruby&lt;/a&gt; 环境（Jekyll 是基于 Ruby 开发的）、包管理器 &lt;a href=&quot;http://rubygems.org/pages/download&quot;&gt;RubyGems&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;(由于我是基于windows来做这个的，所以有必要配置安装相关的Windows环境，方便以后操作。)&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://jekyllcn.com/&quot;&gt;Jekyll&lt;/a&gt;是一个免费的简单静态网页生成工具，可以配合第三方服务例如： 评论、分享等等扩展功能(评论第三方服务的选择后面会讲到)，Jekyll 可以直接部署在 Github（国外） 或 Coding（国内） 上，可以绑定自己的域名。&lt;a href=&quot;http://jekyll.bootcss.com/&quot;&gt;Jekyll中文文档&lt;/a&gt;、&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll英文文档&lt;/a&gt;、&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll主题列表&lt;/a&gt;。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;如果你是 Mac 用户，你就需要安装 Xcode 和 Command-Line Tools了。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ruby与ruby gem的关系&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;ruby是一种脚本语言
+ruby的其中一个“程序”叫rubygems，简称 gem(ruby 1.9.2及其以上就已经默认安装了ruby gem的，所以无需再次手动安装)
+另外还有一个ruby bunder(rails框架中用来管理项目的gem的，叫bundle)，在windows中搭建jekyll，需要安装完ruby后用gem 安装下bunder。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ruby与jekyll的关系&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;jekyll是基于ruby的，所以搭建jekyll之前必须确保ruby正常安装 注意，必须ruby大于2.0.0。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;jekyll与python的关系(表示才知道)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;jekyll3.0之前，有一个语法高亮插件”Pygments”，这玩意是基于python的，所以才会有各种教程里面都说搭建jekyll之前需要python环境。
+!!!但是,请注意 jekyll3.0以后，语法高亮插件已经默认改成了 “rouge‘ 而它是基于ruby的，也就是说 现在搭建jekyll,我们完全不必要再安装python 这样可以减少很大一部分工作量。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;为什么ruby要改用source来源&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;不管是那一篇教程，都会告诉你安装完ruby后需要通过gem命令将官方源改成淘宝源或[ruby china][]源，这是因为默认的官方源在国外，国内几乎是无法访问的(具体原因么…)
+所以才会必须改成其否源，否则无法使用，但是，请注意 现在淘宝源已经停止维护了，最新搭建jekyll 都应该要改成 [ruby china][]的源http://gems.ruby-china.org&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;如何解决jekyll安装过程中的问题&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;首先，在确保ruby(2.0.0以上)正常安装，并且切换了ruby china源(或者淘宝源)后，其它遇到的所有问题几乎都能解决。当然，确实某些ruby程序的问题，所以只需要根据提示 通过相应命令，比如 gem install … 即可解决.&lt;/p&gt;
+
+&lt;p&gt;注：windows下还得确保DEVELOPMENT KIT正常安装，并且正确配置。&lt;/p&gt;
+
+&lt;p&gt;提前总结一下，安装Jekyll主要有以下三个步骤&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;安装 Ruby&lt;/li&gt;
+  &lt;li&gt;安装 DevKit&lt;/li&gt;
+  &lt;li&gt;安装 Jekyll&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;接下来就正式开始安装啦！&lt;/strong&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;安装ruby&quot;&gt;安装Ruby&lt;/h3&gt;
+&lt;p&gt;下载安装exe，地址：&lt;a href=&quot;http://rubyinstaller.org/downloads/&quot;&gt;http://rubyinstaller.org/downloads/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;根据自己的机型选择对应的安装包(因后续有需要安装不同的gem，我发现好多因为ruby版本问题装不了，所以在这推荐使用2,2,4版本的)
+&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/2W1u1O1a0Z3U0P261w1D/image01.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;安装的注意点：
+自动帮你配置环境变量，要安装在根目录
+&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/083F2I250N1i1M1q023u/image02.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;测试是否安装完成：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby -v&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;我的输出结果是&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby 2.3.0p0 (2015-12-25 revision 53290) [x64-mingw32]&lt;/code&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;安装devkit&quot;&gt;安装Devkit&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/0P0q0z2G3o3n2T3s1D2t/image03.png&quot; alt=&quot;&quot; /&gt;
+1）运行安装包并解压缩至某文件夹，如 C:\DevKit&lt;/p&gt;
+
+&lt;p&gt;2）通过初始化来创建&lt;code class=&quot;highlighter-rouge&quot;&gt;config.yml&lt;/code&gt;文件。在命令行窗口内，输入下列命令：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;cd “C:\DevKit”
+ruby dk.rb init
+notepad config.yml
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;3）在打开的记事本窗口中，于末尾添加新的一行- C:\Ruby200-x64(这段代表加上自己的ruby路径，实际中可以将C:\Ruby200-x64改为自己的实际ruby目录)，保存文件并退出。&lt;/p&gt;
+
+&lt;p&gt;4）回到命令行窗口内，审查（非必须）并安装。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ruby dk.rb review
+ruby dk.rb install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;一切顺利后，就代表Development Kit已经正确安装并配置&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;更改默认的source源&quot;&gt;更改默认的source源&lt;/h3&gt;
+
+&lt;p&gt;这是很重要的一步！鉴于官方源无法访问，所以我们得更换为可以使用的源，这里推荐使用[ruby china][]源，大致步骤如下:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;先键入命令&lt;code class=&quot;highlighter-rouge&quot;&gt;gem sources -l&lt;/code&gt;查看当前已经添加的源(默认应该是同时有官方源和淘宝源);&lt;/li&gt;
+  &lt;li&gt;然后通过&lt;code class=&quot;highlighter-rouge&quot;&gt;gem sources -r https://rubygems.org/&lt;/code&gt; &lt;code class=&quot;highlighter-rouge&quot;&gt;gem sources -r https://ruby.taobao.org/&lt;/code&gt;分别移除官方源和淘宝源 (注意，请对比实际，移除自己已经添加的源即可，可以改为自己上一步中查询出来的地址);&lt;/li&gt;
+  &lt;li&gt;通过&lt;code class=&quot;highlighter-rouge&quot;&gt;gem sources -a http://gems.ruby-china.org&lt;/code&gt;添加了&lt;code class=&quot;highlighter-rouge&quot;&gt;[ruby china][]&lt;/code&gt;的可用源;&lt;/li&gt;
+  &lt;li&gt;修改来源后可以通过&lt;code class=&quot;highlighter-rouge&quot;&gt;gem sources -l&lt;/code&gt;查看是否正确修改。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;注意,上述的[ruby china][]源,我采用了http链接，这是因为我在windows中使用https时遇到了ssl问题，并且无法解决，如果你能正确解决，可以换为https链接。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;安装jekyll&quot;&gt;安装jekyll&lt;/h3&gt;
+&lt;p&gt;先查看你的gem是否安装完毕：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gem -v
+gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;测试是否安装完毕：
+&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/0i0g0L1g1v2r3S2s012z/image04.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;新建jekyll 项目&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;jekyll new myblog
+cd myblog
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;运行jekyll 项目： &lt;a href=&quot;http://jekyllrb.com/docs/quickstart/&quot;&gt;官方文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll s / jekyll serve&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;另外，如果过程中遇到一些其它缺失组件的情况，可以通过相应的gem命令安装
+&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/183Y2d1d2F3V3T3d1x2a/image05.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;最终成功运行！
+&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/0c1M1w3B2u0L2a251K0P/image06.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;在浏览器里输入： &lt;a href=&quot;http://localhost:4000&quot;&gt;http://localhost:4000&lt;/a&gt;，就可以看到你的博客效果了.
+&lt;img src=&quot;https://dha4w82d62smt.cloudfront.net/items/3J0j1I0I0k3x0e0v0002/Image%202018-04-22%20at%206.58.16%20PM.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;简析目录结构&quot;&gt;简析目录结构&lt;/h3&gt;
+&lt;p&gt;　
+Jekyll 的核心其实是一个文本转换引擎。它的概念其实就是： 你用你最喜欢的标记语言来写文章，可以是 Markdown，也可以是 Textile,或者就是简单的 HTML, 然后 Jekyll 就会帮你套入一个或一系列的布局中。在整个过程中你可以设置URL路径, 你的文本在布局中的显示样式等等。这些都可以通过纯文本编辑来实现，最终生成的静态页面就是你的成品了。&lt;/p&gt;
+
+&lt;p&gt;一个基本的 Jekyll 网站的目录结构一般是像这样的：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.
+├── _config.yml
+├── _includes
+|   ├── footer.html
+|   └── header.html
+├── _layouts
+|   ├── default.html
+|   ├── post.html
+|   └── page.html
+├── _posts
+|   └── 2018-01-11-welcome-to-jekyll.md
+├── _sass
+|   ├── _base.scss
+|   ├── _layout.scss
+|   └── _syntax-highlighting.scss
+├── about.md
+├── css
+|   └── main.scss
+├── feed.xml
+└── index.html
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;&lt;small&gt;&lt;small&gt;注意：如果你暂时没有自己的域名，CNAME里面就什么都不用填。&lt;/small&gt;&lt;/small&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;这些目录结构以及具体的作用可以参考 &lt;a href=&quot;http://jekyll.com.cn/docs/structure/&quot;&gt;官网文档&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;进入 &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml &lt;/code&gt;里面，修改成你想看到的信息，重新 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll server&lt;/code&gt; ，刷新浏览器就可以看到你刚刚修改的信息了。&lt;/p&gt;
+
+&lt;p&gt;到此，基于Jekyll初步搭建博客算是完成了。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;关于网站评论管理系统与访问统计系统&quot;&gt;关于网站评论管理系统与访问统计系统&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;访问统计&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;你需要去&lt;a href=&quot;http://tongji.baidu.com/web/register&quot;&gt;百度统计&lt;/a&gt;和&lt;a href=&quot;https://www.google.com/analytics/&quot;&gt;Google Analytics&lt;/a&gt;(翻个墙咯~ 多大点事)注册账号，并提取相应的id（详细操作请Baidu或Google）这在后面会使用到。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;评论管理系统&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;目前本网站使用的是一款韩国名为“来必力”评论系统，&lt;a href=&quot;https://livere.com/&quot;&gt;来必力官网&lt;/a&gt;。当然还了解了一下这款快速、简洁且高效的无后端评论系统——&lt;a href=&quot;https://valine.js.org/&quot;&gt;Valine评论系统&lt;/a&gt;;&lt;/p&gt;
+
+&lt;p&gt;后面我又发现了&lt;a href=&quot;https://github.com/imsun/gitment&quot;&gt;gitment&lt;/a&gt;，一款由国内大牛&lt;a href=&quot;https://imsun.net/posts/gitment-introduction/&quot;&gt;imsun&lt;/a&gt;开发的基于github issues的评论系统，网上也是有不少相关的布置教程的，作者在这里提供一篇仅供参考–&lt;a href=&quot;https://www.cnblogs.com/jacobpan/archive/2017/07/18/7200512.html&quot;&gt;在Jekyll博客添加评论系统：gitment篇&lt;/a&gt;。&lt;/p&gt;
+
+&lt;p&gt;下面是这段时间在解决 ** 添加评论系统 ** 问题时,花时间找了一下国内外的几个第三方评论系统:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;多说，曾经较火的评论系统，网上介绍文章比较多，但已于2017年6月1日正式关停服务，无法再用了。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;畅言，&lt;a href=&quot;https://www.kuaizhan.com/&quot;&gt;sohu&lt;/a&gt;旗下的，网上说：需要个人博客备案后才能使用，备案操作本身就很繁琐(这个我没有测试过，不肯确定)。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;友言，&lt;a href=&quot;http://www.jiathis.com/&quot;&gt;jiaThis&lt;/a&gt;旗下的，网上说：由于时http请求，github pages现在都是https了， 在https站点无法调用http请求，故也无法使用(这个我也没有测试过，不肯确定)。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;网易云跟贴，曾被当作“多说”的替代品，可惜官方通报说也在2017年8月1日下线了。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;再看看&lt;a href=&quot;https://disqus.com/&quot;&gt;Disqus&lt;/a&gt;，国外比较火的评论系统，但在国内墙了，也只能暂时放弃了。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;本站目前使用的是&lt;a href=&quot;https://livere.com/&quot;&gt;来必力&lt;/a&gt;,通过这段时间使用情况看，还是挺好的。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;下面这些是后期补充的&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://gitalk.github.io/&quot;&gt;Gittalk&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://imsun.github.io/gitment/&quot;&gt;Gitment&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://valine.js.org/&quot;&gt;Valine&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://www.hypercomments.com/en&quot;&gt;HYPERCOMMENTS&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;关于编写文章&quot;&gt;关于编写文章&lt;/h3&gt;
+
+&lt;p&gt;所有的文章都是 _posts 目录下面，文章格式为 mardown 格式，文章文件名可以是 .mardown 或者 .md。&lt;/p&gt;
+
+&lt;p&gt;编写一篇新文章很简单，你可以直接从 _posts/ 目录下复制一份出来 &lt;code class=&quot;highlighter-rouge&quot;&gt;2018-01-13-Hello World.md&lt;/code&gt; ，修改名字为 &lt;code class=&quot;highlighter-rouge&quot;&gt;2018-01-11-article1.md&lt;/code&gt; ，注意：文章名的格式必须为  &lt;code class=&quot;highlighter-rouge&quot;&gt;年-月-日-articleName&lt;/code&gt; ，后面的 &lt;code class=&quot;highlighter-rouge&quot;&gt;articleName&lt;/code&gt;同时也是该篇文章的链接 URL。&lt;/p&gt;
+
+&lt;p&gt;只不过如果文章名为中文，比如文章&lt;code class=&quot;highlighter-rouge&quot;&gt;https://javef.github.io/2018/04/走进Markdown园子/&lt;/code&gt;的链接URL就会变成这样的：&lt;code class=&quot;highlighter-rouge&quot;&gt;https://javef.github.io/2018/04/%E8%B5%B0%E8%BF%9BMarkdown%E5%9B%AD%E5%AD%90/&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;所以建议文章名最好是英文或者阿拉伯数字。&lt;/p&gt;
+
+&lt;p&gt;打开你新建的博客文章&lt;code class=&quot;highlighter-rouge&quot;&gt;2018-01-11-article1.markdown&lt;/code&gt;&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: post
+title:  &quot;article1&quot;
+date:   2018-01-11
+tag: jekyll
+---
+
+(这儿便是正文内容了...)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;其中：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;title:  显示的文章名， 如：title: 我的第一篇文章                    
+date:   显示的文章发布日期，如：date: 2018-01-11(格式要对)                          
+tag:    tag标签的分类，如：tag: 随笔            
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;注意：文章头部格式必须包含上面的那些样板信息，这样才能正确解析。&lt;/p&gt;
+
+&lt;p&gt;我写文章使用的是&lt;a href=&quot;https://www.zybuluo.com/mdeditor&quot;&gt;Cmd Markdown 编辑阅读器&lt;/a&gt;，如果你对 Markdown 语法不熟悉或者想要了解更多，也可以看看我的另一篇博客: &lt;a href=&quot;https://javef.github.io/2018/04/%E8%B5%B0%E8%BF%9BMarkdown%E5%9B%AD%E5%AD%90/&quot;&gt;走进Markdown园子&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;关于配置域名&quot;&gt;关于配置域名&lt;/h3&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;总结&quot;&gt;总结&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;虽然说在windows上搭建jekyll时遇到了各种各样问题，但是最终都解决了；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在解决的那一瞬间，其实是挺有满足感的(大概这也是乐此不疲的原因之一吧)，而且确实感觉知识面比起以前还是有所拓展的；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;所以不管怎么样，还是得多学多动手尝试！&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;你现在所学的知识，一定会在将来的某个时间段派上用场！&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;update 2018/4/22&lt;/p&gt;
+
+&lt;h2 id=&quot;进一步了解&quot;&gt;进一步了解&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;我们前面讲的都是基于&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby&lt;/code&gt;+&lt;code class=&quot;highlighter-rouge&quot;&gt;git&lt;/code&gt;配置安装jekyll(Hexo也一样)，实际上是利用了Jekyll的博客框架的优势！&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;通过本地开启Jekyll服务实现本地随时随地调试，方便；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;再将自己调试好的个人博客项目上传到远端代码托管仓库，如GitHub、Coding等，利用他们提供的Pages功能实现静态网页的部署；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;当然，如果你有自己的域名的话，也可以将你的域名绑定到你的Pages页面，可以看看我的这篇文章：&lt;a href=&quot;https://javef.github.io/2018/04/%E4%B8%BAGitHub-Pages%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0SSL-%E5%BC%80%E5%90%AFHTTPS%E5%BC%BA%E5%88%B6/&quot;&gt;为GitHub Pages自定义域名并添加SSL-开启HTTPS强制&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;真正快速部署个人博客&quot;&gt;真正快速部署个人博客&lt;/h3&gt;
+
+&lt;p&gt;先提前说明一下这种取巧的方法，需要下载安装哪些&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://desktop.github.com/&quot;&gt;GitHub Desktop&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://git-scm.com/downloads&quot;&gt;Git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;具体步骤&quot;&gt;具体步骤&lt;/h4&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;创建一个 github 账号，然后创建一个跟你账户名一样的仓库，如我的 github 账户名叫 &lt;a href=&quot;https://github.com/Javef&quot;&gt;Javef&lt;/a&gt;，我的 github 仓库名就叫 &lt;a href=&quot;https://github.com/Javef/javef.github.io&quot;&gt;javef.github.io&lt;/a&gt;；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;其实这个时候去浏览器输入&lt;a href=&quot;https://javef.github.io&quot;&gt;https://javef.github.io&lt;/a&gt;,这个静态页面就已经创建好了，只是这个时候页面内容太空虚…&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;那么为了创建一个好看又稳定、简洁又完整的网页，去Google或Baidu搜索挑选下载某个你认为与你审美搭得上的Jekyll、Hexo等等框架开放源码项目，至于修改其中哪些配置参数变成你自己可用的页面框架，这里就不赘述了，很简单的。这里我提供一些:&lt;a href=&quot;https://github.com/jekyll/jekyll/wiki/sites&quot;&gt;&lt;strong&gt;Jekyll-powered blogs and sites&lt;/strong&gt;&lt;/a&gt;；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;下载安装Git；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;下载安装GitHub Desktop，输入你的GitHub账号密码登录；&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;通过以下方法将你之前挑选准备的网页框架项目文件上传到远端托管仓库。&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;打开此电脑，选择一个文件夹，比如 f 盘的 test 文件，右键空白处点击 git bash here；&lt;/li&gt;
+      &lt;li&gt;git clone https://github.com/Javef/javef.github.io.git javef.github.io&lt;/li&gt;
+      &lt;li&gt;cd javef.github.io&lt;/li&gt;
+      &lt;li&gt;将自己之前准备的网页框架项目文件复制粘贴至 f 盘的 test 文件中&lt;/li&gt;
+      &lt;li&gt;git add .                         # 将新添加的文件加入索引中&lt;/li&gt;
+      &lt;li&gt;git commit -m “first commit”      # 将这次的修改作为一个打包&lt;/li&gt;
+      &lt;li&gt;git push origin master            # 提交到远程仓库&lt;/li&gt;
+      &lt;li&gt;可能会有弹出框让你输入你的 github 账号和密码哦&lt;/li&gt;
+      &lt;li&gt;这个时候你再去浏览器输入&lt;a href=&quot;https://javef.github.io&quot;&gt;https://javef.github.io&lt;/a&gt;，刷新一下，就可以看到全新的页面了~&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;补充-常用git命令&quot;&gt;补充-常用git命令：&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone  //本地如果无远程代码，先做这步，不然就忽略
+$ cd //定位到你blog的目录下
+$ git status //查看本地自己修改了多少文件
+$ git add . //添加远程不存在的git文件
+$ git commit  -m &quot;what I want told to someone&quot; //提交修改
+$ git push  //更新到远程服务器上
+$ git rm //移除文件
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;注意&quot;&gt;注意:&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git status&lt;/code&gt;  列出当前目录所有还没有被git管理的文件和被git管理且被修改但还未提交(&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit&lt;/code&gt;)的文件，也就是所有改动文件，红色字体标出。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;然后输入 &lt;code class=&quot;highlighter-rouge&quot;&gt;git add . &lt;/code&gt; (有个点) 表示添加当前目录下的所有文件和子目录，&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;然后再输入一次 &lt;code class=&quot;highlighter-rouge&quot;&gt;git status&lt;/code&gt; 如果看见文件都变绿了 ，那么就代表 它们已经准备好了被提交（&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit&lt;/code&gt;）。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h4 id=&quot;关于-git-rm&quot;&gt;关于 &lt;code class=&quot;highlighter-rouge&quot;&gt;git rm&lt;/code&gt;&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;由于在github上只能删除仓库,却无法删除文件夹或文件，所以只能通过命令来解决&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;$ git rm file1.txt                #删除file1.txt&lt;/li&gt;
+  &lt;li&gt;git commit -m ‘delete file1.txt’  #提交,添加操作说明&lt;/li&gt;
+  &lt;li&gt;git push -u origin master         #将本次更改更新到github项目上去&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;这个命令必须是在提交到版本库中以后才能够执行的,否则的话：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;如果这个文件没有提交到暂存区，它是不会被发现的：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git rm file1.txt
+fatal: pathspec 'file1.txt' did not match any files
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;如果提交到暂存区了以后，还是没办法删除：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git rm file1.txt
+error: the following file has changes staged in the index:
+    file1.txt
+(use --cached to keep the file, or -f to force removal)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;如果这个文件与版本库中不一致，就删除不了，除非强制删除，如下所示：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git rm file2.txt
+error: the following file has staged content different from both the file and the HEAD:
+    file2.txt
+(use -f to force removal)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;如果你只有一个文件想要删除，使用这个命令可以真正的从文件系统中删除了文件，并且它会暂存这个文件已经被删除的事实，如果你提交了，这个文件不会从之前的历史中消失，但会从未来的提交中消失。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;参数–cached&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;如果你想删除这样一个文件，不想从文件系统中真正的删除它,也就是本地项目中的文件不受操作影响,删除的只是远程仓库中的文件，就是用下面的命令：&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git rm --cached file3.txt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;换个说法，你想告诉Git，不再跟踪这个文件，但是把它保留在工作树中，这可能是一种情况，你以外地提交了一个文件，你并不想让他成为历史的一部分。它暂存了删除，但是，他在那里保存了文件，现在，在你的工作树中，作为一个不被追踪的文件。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;注意：每次增加文件或删除文件，都要commit 然后直接 git push -u origin master，就可以同步到github上了。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;参考资料&quot;&gt;参考资料&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/lmk123/blog/issues/55&quot;&gt;介绍一些免费好用的静态网站托管服务&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.ituring.com.cn/article/114888&quot;&gt;Jekyll+多说，建立属于你的轻博客&lt;/a&gt;»»虽然&lt;code class=&quot;highlighter-rouge&quot;&gt;多说&lt;/code&gt;已经亡了，但通过这篇博文很感慨这家伙当年的强大…&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Thu, 15 Feb 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/02/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E6%8B%93%E5%B1%95%E7%89%88/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/02/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E6%8B%93%E5%B1%95%E7%89%88/</guid>
+        
+        <category>Jekyll</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Hello World</title>
+        <description>&lt;p&gt;update on 2018/01/18&lt;/p&gt;
+
+&lt;p&gt;分享这段时间我的一些成果，也是对这段时间工作的总结。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;说明&quot;&gt;说明&lt;/h3&gt;
+
+&lt;p&gt;基于Jekyll博客框架搭建的个人博客静态页面网站。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/Javef/javef.github.io.git
+cd yourName.github.io
+bundler install
+bundler exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;将可以在本地浏览器输入&lt;a href=&quot;http://127.0.0.1:4000&quot;&gt;http://127.0.0.1:4000&lt;/a&gt;实现访问。&lt;/p&gt;
+
+&lt;p&gt;所有的博客配置信息都在&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;中，当然谨记在修改该文件后需要重启&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll Server&lt;/code&gt;页面才会生效。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;，一般很多的教程会提示你确保已经安装配置Git、Npm、Ruby、Python、Jekyll等环境…&lt;/p&gt;
+
+&lt;p&gt;实际上不同方法是不同的，从专业性来看，环境一定是要安装的，不论你是否认可，计算机领域中安装配置某些复杂环境本身就是提升自我的过程。 但也有一些较为快速简单简单的方法呐，详情见我的另一篇文章：&lt;a href=&quot;https://javef.github.io/2018/02/Jekyll-%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2-%E6%8B%93%E5%B1%95%E7%89%88/&quot;&gt;Jekyll搭建个人博客-拓展版&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;当然了，你也可以看看我的&lt;a href=&quot;https://javef.github.io/&quot;&gt;个人博客&lt;/a&gt;。&lt;/p&gt;
+
+&lt;hr /&gt;
+&lt;h3 id=&quot;展望&quot;&gt;展望&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;2018年· 关键词: 用心&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;2020年· 北京冬奥会&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;2030年· 东京30天&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sat, 13 Jan 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/01/Hello-World/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/01/Hello-World/</guid>
+        
+        <category>分享</category>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
