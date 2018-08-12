@@ -2,34 +2,34 @@
 layout: page
 title: 关于我 
 ---
-<h3>📋<strong>公告</strong></h3>  
+<h3>📋<strong>Hello,world!</strong></h3>  
 
-本站自2018年5月1日起暂时不再继续更新，仅供学习参观！
+我是一名很普通的学生，不带任何光环，喜欢读书，喜欢旅行，喜欢运动；现在也从码农开始，热衷于技术，热衷于分享。
 
-目前我的新站点为[北岛向南的小屋](https://zhouie.cn).欢迎访问~
+本站是我不久前搭建的，仅供学习参观！欢迎访问~
 
 <hr>
 <h3>🎓<strong>关于我</strong></h3>
 
-&nbsp;🔹长期生活在中国以南地区
+&nbsp;🔹长期生活在中国北方地区(精确点说，应该是秦岭以北。)
 
-&nbsp;🔹年少时也曾在日记本偷偷写下————以后出国去香榭丽舍大街养老的梦
+&nbsp;🔹年少时也曾在日记本偷偷写下————要仗剑走天涯，走遍全世界，只是后来bug太多没去成
 
-&nbsp;🔹目前本科在读，打算读研进一步提升自己，认识更多有趣的灵魂
+&nbsp;🔹长期也在计算机边缘化地区学习探索，目前研一在读，想认识更多有趣的灵魂
 
-&nbsp;🔹长期在计算机边缘化地区学习探索，实用有趣技术的热衷粉丝，学习涉猎广泛
+&nbsp;🔹准备从一名不羁的码农开始，涉猎较广，不会局限于技术
 
-&nbsp;🔹接触较多的便是前端开发，目前计划深入地去做Android、小程序这块的拓展提升
+&nbsp;🔹目前准备主要学习python，机器学习，数据分析
 
-&nbsp;🔹坚定的共产主义追随者，中共预备党员
+&nbsp;🔹坚定的共产主义追随者，只是时常怯于自身觉悟达不到组织要求导致迟迟未能积极靠拢组织
 
-&nbsp;🔹还是希望以后有机会，去邻国日本旅居一段时间
+&nbsp;🔹还是希望以后有机会，去走天涯，去速贷看老詹打球（现在在洛城了），去玩好玩的，顺带吃好吃的。
 <p>
 
 <hr>
 <h3>🐕<strong>友情链接</strong></h3>
 <p>
-&nbsp;🔹<a href="https://zhouie.cn/">北岛向南的小屋</a>🔞了解一下？<p>
+<!--&nbsp;🔹<a href="https://zhouie.cn/">北岛向南的小屋</a>🔞了解一下？<p>-->
 
 &nbsp;🔹<a href="http://ericxie.coding.me/">EricXie's Blog</a>，教书匠，👨伪码农<p>
 
@@ -39,21 +39,21 @@ title: 关于我
 <hr>
 <h3>📬<strong>与我交流</strong></h3> 
 <p>
-&nbsp;🔹邮箱：<nanzhouie@gmail.com>🍦<p>
+&nbsp;🔹邮箱：<t-zhou@foxmail.com>🍦<p>
 
-&nbsp;🔹微信公众号： <a href="http://parov0k9s.bkt.clouddn.com/img/share/%E5%8C%97%E5%B2%9B%E5%90%91%E5%8D%97.png"> 北岛Y向南</a> (ID:nanzhouie)🍟<p>
+&nbsp;🔹微信公众号： <a href="https://mmbiz.qpic.cn/mmbiz_jpg/5yzc5jriciajA4vYoE47Y4hMeYe4xiaRCkEAM4MQK5Pgicia27lvrf5D2h2f3JNAfEnibglYibbazlHicJ1tz4TxN0aQQQ/0?wx_fmt=jpeg"> solarzhou</a> (ID:solarzhou_)🍟<p>
 
-&nbsp;🔹Google+： <a href="https://plus.google.com/110700564157953759206">愿有人陪你颠沛流离</a>☕<p>
+&nbsp;🔹Google+： <a href="https://plus.google.com/110694605441707810284">苦寒</a>☕<p>
 
-&nbsp;🔹网易云音乐：<a href="http://music.163.com/#/user/home?id=426481614">南城四月里的小巷</a>🍩<p>
+&nbsp;🔹网易云音乐：<a href="http://music.163.com/#/user/home?id=120984001">芒果会走路</a>🍩<p>
 
-&nbsp;🔹豆瓣： <a href="https://www.douban.com/people/jave_f/">那时我们有梦</a>🍰<p>
+<!--&nbsp;🔹豆瓣： <a href="https://www.douban.com/people/jave_f/">那时我们有梦</a>🍰<p>-->
 
-&nbsp;🔹知乎：<a href="https://www.zhihu.com/people/jave_f/activities">我亦是行人</a>🍇<p>
+&nbsp;🔹知乎：<a href="https://www.zhihu.com/people/tzhou-36-67/activities">Solarzhou</a>🍇<p>
 
-&nbsp;🔹简书：<a href="https://www.jianshu.com/u/003b6aa1939d">一个优质创作社区</a>🍒 <p>
+&nbsp;🔹简书：<a href="https://www.jianshu.com/u/1ca27581db0a">一个优质创作社区</a>🍒 <p>
 
-&nbsp;🔹CSDN：<a href="https://blog.csdn.net/jave_f">连世界都没观过，哪来的世界观</a>🍔<p>
+&nbsp;🔹CSDN：<a href="https://blog.csdn.net/ZT7524">连世界都没观过，哪来的世界观</a>🍔<p>
 
 <p>
 
