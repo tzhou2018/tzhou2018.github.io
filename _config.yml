@@ -24,14 +24,15 @@ comment:
 
 # Social
 social:
-    weibo: 15734067524 
+
+    weibo: 15734067524
     github: tzhou2018
     # twitter: 
     gplus: solarzhou28@gmail.com    #Google+ 的id号
     mail: t-zhou@foxmail.com
     #flickr: nanzhouie
-    jianshu: Solarzhou
-    music: 120984001    # 网易云音乐的ID
+    #paypal: zhouie	
+    music: 120984001    # Netease Cloud Music网易云音乐的ID
     
 # 百度统计 
 # 使用博客模板请去掉或者更换 id 
