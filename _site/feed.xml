@@ -5,9 +5,82 @@
     <description>续建码头，精彩继续...</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 Aug 2018 21:27:20 +0800</pubDate>
-    <lastBuildDate>Mon, 13 Aug 2018 21:27:20 +0800</lastBuildDate>
+    <pubDate>Thu, 16 Aug 2018 19:21:56 +0800</pubDate>
+    <lastBuildDate>Thu, 16 Aug 2018 19:21:56 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>使用Python实现与图灵机器人交互</title>
+        <description>&lt;h2 id=&quot;应用场景&quot;&gt;应用场景&lt;/h2&gt;
+&lt;p&gt;七夕快到了，看着那些情侣在一起腻腻歪歪，整天短消息停不下来，众多苦逼的程序猿或许只能对着电脑了。是不是羡慕嫉妒恨呢！手机另一端怎么没人和自己在一起聊天呢？是不是也想有个人可以秒回自己的消息。没事，拿起python，我们来和图灵机器人互动。&lt;/p&gt;
+
+&lt;p&gt;以上纯xc，来看下使用python和机器人交互。&lt;/p&gt;
+
+&lt;p&gt;要做一个能够与人交流的机器人有很多种方法，其中最简单的莫过于使用他人提供的接口。下面以图灵机器人为例，演示这一功能。
+简单来说，就是我们以一定的规则给图灵的服务器发送数据包，图灵服务器另一端会给予我们相应的应答。为此，你需要一个Tuling Key来告诉服务器有权和它进行对话。&lt;/p&gt;
+
+&lt;p&gt;进入图灵机器人官网注册后，会在个人中心自动生成一个apikey。
+&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/12559062-45fca707af824b89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;2018-08-16_171249.png&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;实现环境：Windows系统；python 3.x；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;在开始编写程序之前，需要安装 itchat 包。itchat是一个开源的微信个人号接口，使用python调用微信从未如此简单。&lt;/p&gt;
+
+&lt;p&gt;下面直接从写入详细注释的代码开始，这样更显得直观。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# coding = utf8
+import requests
+import itchat
+# 去图灵机器人官网注册后会生成一个apikey，可在个人中心查看
+KEY = '8edce3ce905a4c1dbb965e6b35c3838f'
+def get_response(msg):
+    apiUrl = 'http://www.tuling123.com/openapi/api'
+    data = {
+        'key'   : KEY,
+        'info'   : msg,   # 这是要发送出去的信息
+        'userid'  : 'wechat-rebot',  #这里随意写点什么都行
+    }
+    try:
+        # 发送一个post请求
+        r = requests.post(apiUrl, data =data).json()
+        # 获取文本信息，若没有‘Text’ 值，将返回Nonoe 
+        return r.get('text')
+    except:
+        return
+# 通过定义装饰器加强函数 tuling_reply(msg) 功能，获取注册文本信息
+@itchat.msg_register(itchat.content.TEXT)
+def tuling_reply(msg):
+    # 设置一个默认回复，在出现问题仍能正常回复信息
+    defaultReply = 'I received: ' +msg['Text']
+    reply = get_response(msg['Text'])
+    # a or b 表示，如有a有内容，那么返回a，否则返回b
+    return reply or defaultReply
+# 使用热启动，不需要多次扫码
+itchat.auto_login(hotReload=True)
+itchat.run()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;配置好环境后，在编译器中运行上述程序，扫码登录后就可以正常测试了。之后使用别的手机给自己发消息，便可获得回复。&lt;/p&gt;
+
+&lt;p&gt;注：微信可以发送各类消息，包括文本、图片、语音等。不过本次测试我们只获取文本消息文本消息。
+效果图如下：
+&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/12559062-54497342438b1a25.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;微信图片_20180816175804_看图王.jpg&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;从一名不羁的码农开始，欢迎关注我的公众号
+&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/12559062-c422f49f496bdc02.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240&quot; alt=&quot;qrcode_for_gh_730b1594d3c6_258 (1).jpg&quot; /&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 16 Aug 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/08/article2/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/08/article2/</guid>
+        
+        <category>分享</category>
+        
+        
+      </item>
     
       <item>
         <title>使用python制作词云</title>
